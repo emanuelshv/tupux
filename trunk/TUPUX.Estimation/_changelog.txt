@@ -1,0 +1,29 @@
+22/07/08
+========
+- Se creó todo el proyecto y namespace TUPUX.Estimation.
+- Se crearon en el namespace TUPUX.Estimation AbstractClassesAnalyzer,
+	AbstractRelationship, ConcreteClassesAnalyzer, FileGenerator, IClassesAnalyzer.
+- Se cambió la clase TUPUX.Entity.UMLFile para que esta contenga un UMLClassCollection,
+	indicando los UMLClass que componen el File. Se creó la propiedad
+	correspondiente.
+- Se descomentó línea 700 de AbstractRecord.cs debido a que no se podía buscar un UMLPackage
+	si es que el stereotpye era null.
+- Se crearon los entities para todos los tipos de relaciones y la interfaz UMLRelationship para poder 
+	contemplar a todos los distintos tipos de relaciones con una única interfaz base.
+
+12/08/08
+========
+- Se creó todo el proyecto TUPUX.Estimation y en base a esto se hizo todo el esquema de Actions y
+	RelationshipsAnalyzer.
+- El indizador para ActionMap fue declarado como private y se creó un método para acceder a los
+	Actions. Esto debido a que es necesario discernir si se está obteniendo el Action utilizando
+	la llave normal o alterna, para poder ejecutar el procedimiento del Action adecuado.
+- [HITO] Se terminó toda la parte de la infraestructura excepto el FileCreator el cual de todas
+	formas reestructuraré. Es hora de empezar a crear la galería de Actions por defecto y crear
+	el archivo de texto que cargue el ActionMap correspondiente.
+
+Pendientes
+==========
+- No funciona los Attribbutes al momento de contar los dets dentro del DefaultRelationshipAnalyzer
+- Los dependency types deben ser ingresados por la ventana de Tagged Values
+- No hay ventana de progreso del PES

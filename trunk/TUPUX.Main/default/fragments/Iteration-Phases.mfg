@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XPD:MODELFRAGMENT xmlns:XPD="http://www.staruml.com" version="1">
+<XPD:HEADER>
+</XPD:HEADER>
+<XPD:BODY>
+<XPD:OBJ name="DocumentElement" type="UMLModel" guid="U0GyOnVeg0KLp8Pd3VHngQAA">
+<XPD:ATTR name="Name" type="string">Autogenerate</XPD:ATTR>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLClassDiagram" guid="bsisF3gtgkyjraQmMsbYDQAA">
+<XPD:ATTR name="Name" type="string">IterationPhaseDiagram</XPD:ATTR>
+<XPD:ATTR name="DiagramType" type="string">IterationDiagram</XPD:ATTR>
+<XPD:REF name="DiagramOwner">U0GyOnVeg0KLp8Pd3VHngQAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="O+kPjPql80in3LzefiyH8QAA">
+<XPD:REF name="Diagram">bsisF3gtgkyjraQmMsbYDQAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:BODY>
+</XPD:MODELFRAGMENT>

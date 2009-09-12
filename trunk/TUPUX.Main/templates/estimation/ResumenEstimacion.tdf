@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="EUC-KR" ?>
+<DIRECTMDAGENERATIONUNIT version="1.0">
+  <GROUP>Estimation</GROUP>
+  <CATEGORY>Analysis</CATEGORY>
+  <NAME>Resumen Estimacion</NAME>
+  <DESCRIPTION></DESCRIPTION>
+  <DOCUMENTTYPE>DOCUMENT</DOCUMENTTYPE>
+  <FORMAT>DOC</FORMAT>
+  <DATE>21/07/2008</DATE>
+  <VERSION></VERSION>
+  <APPROACH></APPROACH>
+  <TRANSLATORTYPE>WORD</TRANSLATORTYPE>
+  <TRANSLATORNAME></TRANSLATORNAME>
+  <SAMPLE></SAMPLE>
+  <TUTORIAL></TUTORIAL>
+  <VALIDATOR></VALIDATOR>
+  <PARAMETERS>
+    <PARAMETER>
+      <NAME>TemplateFile</NAME>
+      <TYPE>FILENAME</TYPE>
+      <VALUE>$PATH$\ReporteEstimacion.doc</VALUE>
+    </PARAMETER>
+    <PARAMETER>
+      <NAME>OutputFile</NAME>
+      <TYPE>STRING</TYPE>
+      <VALUE>$TARGET$\Estimacion(gen).doc</VALUE>
+    </PARAMETER>
+    <PARAMETER>
+      <NAME>Keep Comments</NAME>
+      <TYPE>STRING</TYPE>
+      <VALUE>false</VALUE>
+    </PARAMETER>
+    <PARAMETER>
+      <NAME>ShowGenerationProcess</NAME>
+      <TYPE>STRING</TYPE>
+      <VALUE>false</VALUE>
+    </PARAMETER>
+    <PARAMETER>
+      <NAME>Normal Generation</NAME>
+      <TYPE>BOOLEAN</TYPE>
+      <VALUE>true</VALUE>
+    </PARAMETER>
+    <PARAMETER>
+      <NAME>Generate Index</NAME>
+      <TYPE>BOOLEAN</TYPE>
+      <VALUE>true</VALUE>
+    </PARAMETER>
+  </PARAMETERS>
+</DIRECTMDAGENERATIONUNIT>
