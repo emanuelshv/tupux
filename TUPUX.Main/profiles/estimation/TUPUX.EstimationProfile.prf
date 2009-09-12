@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PROFILE version="1.0.7">
+  <HEADER>
+    <NAME>Estimation</NAME>
+    <DISPLAYNAME>Estimation</DISPLAYNAME>
+    <DESCRIPTION>Estimation</DESCRIPTION>
+    <AUTOINCLUDE>True</AUTOINCLUDE>
+  </HEADER>
+  <BODY>
+    <STEREOTYPELIST>
+
+      <STEREOTYPE>
+        <NAME>precedenceModel</NAME>
+        <DESCRIPTION>A use case model specifies the services a system provides to its users; that is, the different ways of using the system, and whose top-level package is a use case system.</DESCRIPTION>
+        <BASECLASSES>
+          <BASECLASS>UMLModel</BASECLASS>
+        </BASECLASSES>
+        <SMALLICON>PrecedenceModel.bmp</SMALLICON>
+      </STEREOTYPE>
+
+      <STEREOTYPE>
+        <NAME>precedenceSystem</NAME>
+        <DESCRIPTION>A use case system is a top-level package that may contain use case packages, use cases, and precedence relationships.</DESCRIPTION>
+        <BASECLASSES>
+          <BASECLASS>UMLPackage</BASECLASS>
+        </BASECLASSES>
+      </STEREOTYPE>
+
+      <STEREOTYPE>
+        <NAME>precendecePackage</NAME>
+        <DESCRIPTION>A use case package contains use cases and precedence relationships.</DESCRIPTION>
+        <BASECLASSES>
+          <BASECLASS>UMLPackage</BASECLASS>
+        </BASECLASSES>
+      </STEREOTYPE>
+
+      <STEREOTYPE>
+        <NAME>Precedence</NAME>
+        <DESCRIPTION>Precedence relation between Use case</DESCRIPTION>
+        <BASECLASSES>
+          <BASECLASS>UMLDependency</BASECLASS>
+        </BASECLASSES>
+        <NOTATION>precedence.nxt</NOTATION>
+        <SMALLICON>precedence.bmp</SMALLICON>
+      </STEREOTYPE>
+
+      <STEREOTYPE>
+        <NAME>IterationPrecedence</NAME>
+        <DESCRIPTION>Precedence relation between Iterations</DESCRIPTION>
+        <BASECLASSES>
+          <BASECLASS>UMLDependency</BASECLASS>
+        </BASECLASSES>
+        <NOTATION>PrecedenceIteration.nxt</NOTATION>
+        <SMALLICON>precedence.bmp</SMALLICON>
+      </STEREOTYPE>
+
+      <STEREOTYPE>
+        <NAME>Generate</NAME>
+        <DESCRIPTION>Generate Relation between iteration and artifact</DESCRIPTION>
+        <BASECLASSES>
+          <BASECLASS>UMLDependency</BASECLASS>
+        </BASECLASSES>
+        <NOTATION>generate.nxt</NOTATION>
+        <SMALLICON>precedence.bmp</SMALLICON>
+      </STEREOTYPE>
+
+      <!-- This section is used for define the project phases o iterations stereotype-->
+      <!-- Start-->
+      <STEREOTYPE>
+        <NAME>ImplementationModel</NAME>
+        <DESCRIPTION></DESCRIPTION>
+        <BASECLASSES>
+          <BASECLASS>UMLModel</BASECLASS>
+        </BASECLASSES>
+        <SMALLICON>ImplementationModel.bmp</SMALLICON>
+      </STEREOTYPE>
+
+      <STEREOTYPE>
+        <NAME>Iteration</NAME>
+        <DESCRIPTION>Iteration groups a set of nested Activities that are repeated more than once. It represents an important structuring element to organize work in repetitive cycles. </DESCRIPTION>
+        <BASECLASSES>
+          <BASECLASS>UMLClass</BASECLASS>
+        </BASECLASSES>
+        <ICON minWidth="40" minHeight="35">Iteration.wmf</ICON>
+        <SMALLICON>iteration.bmp</SMALLICON>
+      </STEREOTYPE>
+
+      <STEREOTYPE>
+        <NAME>Phase</NAME>
+        <DESCRIPTION>Phase represents a significant period in a project, ending with major management checkpoint, milestone, or set of Deliverables. It is included in the model as a predefined special Activity, because of its significance in defining breakdowns. </DESCRIPTION>
+        <BASECLASSES>
+          <BASECLASS>UMLPackage</BASECLASS>
+        </BASECLASSES>
+        <ICON minWidth="40" minHeight="40">PhaseKind.wmf</ICON>
+        <SMALLICON>phasekind.bmp</SMALLICON>
+      </STEREOTYPE>
+
+      <!-- End-->
+
+    </STEREOTYPELIST>
+
+    <TAGDEFINITIONSETLIST>
+      <TAGDEFINITIONSET>
+        <NAME>Phase Estimation Values</NAME>
+        <BASECLASSES>
+          <BASECLASS>UMLPackage</BASECLASS>
+        </BASECLASSES>
+        <TAGDEFINITIONLIST>
+          <TAGDEFINITION lock="False">
+            <NAME>Apply Estimation</NAME>
+            <TAGTYPE>Boolean</TAGTYPE>
+            <DEFAULTDATAVALUE>False</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+
+          <TAGDEFINITION lock="true">
+            <NAME>Phase File Function Points</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="true">
+            <NAME>Phase Actions Function Points</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="true">
+            <NAME>Total Function Points</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+
+        </TAGDEFINITIONLIST>
+      </TAGDEFINITIONSET>
+
+      <TAGDEFINITIONSET>
+        <NAME>Iteration Estimation Values</NAME>
+        <BASECLASSES>
+          <BASECLASS>UMLClass</BASECLASS>
+        </BASECLASSES>
+        <TAGDEFINITIONLIST>
+          <TAGDEFINITION lock="False">
+            <NAME>Apply Estimation</NAME>
+            <TAGTYPE>Boolean</TAGTYPE>
+            <DEFAULTDATAVALUE>False</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+
+          <TAGDEFINITION lock="False">
+            <NAME>Real Effort</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+
+          <TAGDEFINITION lock="False">
+            <NAME>Real Productivity</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+
+          <TAGDEFINITION lock="False">
+            <NAME>Use Case List</NAME>
+            <TAGTYPE referenceType="UMLUseCase">Collection</TAGTYPE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="true">
+            <NAME>File Function Points</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="true">
+            <NAME>File Actions Function Points</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="true">
+            <NAME>Total Function Points</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+
+          <TAGDEFINITION lock="true">
+            <NAME>Estimated Effort</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+
+
+          <TAGDEFINITION lock="true">
+            <NAME>Estimated Productivity</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          
+          <TAGDEFINITION lock="true">
+            <NAME>EAF</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+        </TAGDEFINITIONLIST>
+      </TAGDEFINITIONSET>
+
+
+      <TAGDEFINITIONSET>
+        <NAME>Previus Values</NAME>
+        <BASECLASSES>
+          <BASECLASS>UMLClass</BASECLASS>
+        </BASECLASSES>
+        <TAGDEFINITIONLIST>
+          <TAGDEFINITION lock="false">
+            <NAME>Productivity</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="false">
+            <NAME>EAF</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+        </TAGDEFINITIONLIST>
+      </TAGDEFINITIONSET>
+
+
+
+
+
+      <!--Don't remove this sections-->
+      <!--Begin Edit TagDefinition Factors-->
+      <TAGDEFINITIONSET>
+        <NAME>Factors</NAME>
+        <BASECLASSES>
+          <BASECLASS>UMLClass</BASECLASS>
+        </BASECLASSES>
+        <TAGDEFINITIONLIST>
+          <TAGDEFINITION lock="False">
+            <NAME>(RELY)Required Reliability</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>VL</LITERAL>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(DATA)Database Size</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(CPLX)Product Complexity</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>VL</LITERAL>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+              <LITERAL>EH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(RUSE)Required Reuse</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+              <LITERAL>EH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(DOCU)Documentation</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>VL</LITERAL>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(TIME)Execution Time Constraint</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+              <LITERAL>EH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(STOR)Main Storage Constraint</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+              <LITERAL>EH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(PVOL)Platform Volatility</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(ACAP)Analyst Capability</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>VL</LITERAL>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(PCAP)Programmer Capability</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>VL</LITERAL>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(PCON)Personnel Continuity</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>VL</LITERAL>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(APEX)Applications Experience</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>VL</LITERAL>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(PLEX)Platform Experience</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>VL</LITERAL>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(LTEX)Language and Toolset Experience</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>VL</LITERAL>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(TOOL)Use of Software Tools</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>VL</LITERAL>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(SITE)Multisite Development</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>VL</LITERAL>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+              <LITERAL>EH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>(SCED)Required Development Schedule</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE>N</DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>VL</LITERAL>
+              <LITERAL>L</LITERAL>
+              <LITERAL>N</LITERAL>
+              <LITERAL>H</LITERAL>
+              <LITERAL>VH</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+        </TAGDEFINITIONLIST>
+      </TAGDEFINITIONSET>
+      <!--End Edit TagDefinition Factors-->
+
+
+
+
+      <TAGDEFINITIONSET>
+        <NAME>Use Case Estimation Values</NAME>
+        <BASECLASSES>
+          <BASECLASS>UMLUseCase</BASECLASS>
+        </BASECLASSES>
+        <TAGDEFINITIONLIST>
+
+          <TAGDEFINITION lock="False">
+            <NAME>Real Effort</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+
+          <TAGDEFINITION lock="true">
+            <NAME>Iteration Associated</NAME>
+            <TAGTYPE referenceType="UMLClass">Collection</TAGTYPE>
+          </TAGDEFINITION>
+
+          <TAGDEFINITION lock="true">
+            <NAME>File Function Points</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="true">
+            <NAME>File Actions Function Points</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="true">
+            <NAME>Total Function Points</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="true">
+            <NAME>Estimated Effort</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+
+        </TAGDEFINITIONLIST>
+      </TAGDEFINITIONSET>
+
+      <TAGDEFINITIONSET>
+        <NAME>Artifact Information</NAME>
+        <BASECLASSES>
+          <BASECLASS>UMLArtifact</BASECLASS>
+        </BASECLASSES>
+        <TAGDEFINITIONLIST>
+          <TAGDEFINITION lock="false">
+            <NAME>Process Associated</NAME>
+            <TAGTYPE>String</TAGTYPE>
+          </TAGDEFINITION>
+        </TAGDEFINITIONLIST>
+      </TAGDEFINITIONSET>
+
+
+      <TAGDEFINITIONSET>
+        <NAME>Iteration Information</NAME>
+        <BASECLASSES>
+          <BASECLASS>UMLClass</BASECLASS>
+        </BASECLASSES>
+        <TAGDEFINITIONLIST>
+          <TAGDEFINITION lock="false">
+            <NAME>Date Init</NAME>
+            <TAGTYPE>String</TAGTYPE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="false">
+            <NAME>Date End</NAME>
+            <TAGTYPE>String</TAGTYPE>
+          </TAGDEFINITION>
+        </TAGDEFINITIONLIST>
+      </TAGDEFINITIONSET>
+
+
+      <TAGDEFINITIONSET>
+        <NAME>Collaboration Action</NAME>
+        <BASECLASSES>
+          <BASECLASS>UMLCollaboration</BASECLASS>
+        </BASECLASSES>
+        <TAGDEFINITIONLIST>
+          <TAGDEFINITION lock="False">
+            <NAME>Type</NAME>
+            <TAGTYPE>Enumeration</TAGTYPE>
+            <DEFAULTDATAVALUE></DEFAULTDATAVALUE>
+            <LITERALS>
+              <LITERAL>EI</LITERAL>
+              <LITERAL>EO</LITERAL>
+              <LITERAL>EQ</LITERAL>
+            </LITERALS>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>Generate Action</NAME>
+            <TAGTYPE>Boolean</TAGTYPE>
+            <DEFAULTDATAVALUE>False</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>Send Message</NAME>
+            <TAGTYPE>Boolean</TAGTYPE>
+            <DEFAULTDATAVALUE>False</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>DETs</NAME>
+            <TAGTYPE referenceType="UMLAttribute">Collection</TAGTYPE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="False">
+            <NAME>Steps</NAME>
+            <TAGTYPE referenceType="UMLAttribute">Collection</TAGTYPE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="True">
+            <NAME>Action Function Points</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="True">
+            <NAME>Files Associated Function Points</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="True">
+            <NAME>Total Function Points</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+        </TAGDEFINITIONLIST>
+      </TAGDEFINITIONSET>
+
+
+    </TAGDEFINITIONSETLIST>
+
+    <DATATYPELIST>
+      <DATATYPE>
+        <NAME>Integer</NAME>
+      </DATATYPE>
+      <DATATYPE>
+        <NAME>Float</NAME>
+      </DATATYPE>
+      <DATATYPE>
+        <NAME>Boolean</NAME>
+      </DATATYPE>
+    </DATATYPELIST>
+
+    <ELEMENTPROTOTYPELIST>
+
+
+
+      <ELEMENTPROTOTYPE>
+        <NAME>Precedence</NAME>
+        <DISPLAYNAME>Precedence</DISPLAYNAME>
+        <ICON>precedence.bmp</ICON>
+        <DRAGTYPE>Line</DRAGTYPE>
+        <BASEELEMENT>Dependency</BASEELEMENT>
+        <!--<BASEELEMENT>Dependency</BASEELEMENT>-->
+        <STEREOTYPENAME>Precedence</STEREOTYPENAME>
+        <SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+      </ELEMENTPROTOTYPE>
+
+      <ELEMENTPROTOTYPE>
+        <NAME>RelationIterationPhase</NAME>
+        <DISPLAYNAME>Relation</DISPLAYNAME>
+        <ICON>precedence.bmp</ICON>
+        <DRAGTYPE>Line</DRAGTYPE>
+        <BASEELEMENT argument="2">Association</BASEELEMENT>
+        <SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+      </ELEMENTPROTOTYPE>
+
+      <ELEMENTPROTOTYPE>
+        <NAME>IterationPrecedence</NAME>
+        <DISPLAYNAME>Iteration Precedence</DISPLAYNAME>
+        <ICON>precedence.bmp</ICON>
+        <DRAGTYPE>Line</DRAGTYPE>
+        <BASEELEMENT>Dependency</BASEELEMENT>
+        <!--<BASEELEMENT>Dependency</BASEELEMENT>-->
+        <STEREOTYPENAME>IterationPrecedence</STEREOTYPENAME>
+        <SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+      </ELEMENTPROTOTYPE>
+
+      <ELEMENTPROTOTYPE>
+        <NAME>Generate</NAME>
+        <DISPLAYNAME>Generate</DISPLAYNAME>
+        <ICON>precedence.bmp</ICON>
+        <DRAGTYPE>Line</DRAGTYPE>
+        <BASEELEMENT>Dependency</BASEELEMENT>
+        <STEREOTYPENAME>Generate</STEREOTYPENAME>
+        <SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+      </ELEMENTPROTOTYPE>
+
+      <!-- Elements for Adminin development iterations -->
+      <ELEMENTPROTOTYPE>
+        <NAME>Iteration</NAME>
+        <DISPLAYNAME>Iteration</DISPLAYNAME>
+        <ICON>Iteration.bmp</ICON>
+        <DRAGTYPE>Rect</DRAGTYPE>
+        <BASEELEMENT>Class</BASEELEMENT>
+        <STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+        <STEREOTYPENAME>Iteration</STEREOTYPENAME>
+        <SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+      </ELEMENTPROTOTYPE>
+
+      <ELEMENTPROTOTYPE>
+        <NAME>PhaseClass</NAME>
+        <DISPLAYNAME>Phase</DISPLAYNAME>
+        <ICON>PhaseKind.bmp</ICON>
+        <DRAGTYPE>Rect</DRAGTYPE>
+        <BASEELEMENT>Package</BASEELEMENT>
+        <STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+        <STEREOTYPENAME>Phase</STEREOTYPENAME>
+        <SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+      </ELEMENTPROTOTYPE>
+
+    </ELEMENTPROTOTYPELIST>
+
+    <MODELPROTOTYPELIST>
+      <MODELPROTOTYPE>
+        <NAME>Precedence Model</NAME>
+        <DISPLAYNAME>Precedence Model</DISPLAYNAME>
+        <ICON>PrecedenceModel.bmp</ICON>
+        <BASEMODEL>Model</BASEMODEL>
+        <STEREOTYPENAME>PrecedenceModel</STEREOTYPENAME>
+        <CONTAINERMODELLIST>
+          <CONTAINERMODEL type="UMLProject"/>
+        </CONTAINERMODELLIST>
+      </MODELPROTOTYPE>
+
+      <MODELPROTOTYPE>
+        <NAME>Iteration Model</NAME>
+        <DISPLAYNAME>Iteration Model</DISPLAYNAME>
+        <ICON>ImplementationModel.bmp</ICON>
+        <BASEMODEL>Model</BASEMODEL>
+        <STEREOTYPENAME>IterationModel</STEREOTYPENAME>
+        <CONTAINERMODELLIST>
+          <CONTAINERMODEL type="UMLProject"/>
+        </CONTAINERMODELLIST>
+      </MODELPROTOTYPE>
+
+    </MODELPROTOTYPELIST>
+
+    <PALETTELIST>
+
+      <PALETTE>
+        <NAME>Precedence</NAME>
+        <DISPLAYNAME>Precedence</DISPLAYNAME>
+        <PALETTEITEMLIST>
+          <PALETTEITEM>UseCase</PALETTEITEM>
+          <!--<PALETTEITEM>Association</PALETTEITEM>-->
+          <PALETTEITEM>Precedence</PALETTEITEM>
+        </PALETTEITEMLIST>
+      </PALETTE>
+      <PALETTE>
+        <NAME>IterationState</NAME>
+        <DISPLAYNAME>Iteration elements</DISPLAYNAME>
+        <PALETTEITEMLIST>
+          <PALETTEITEM>Iteration</PALETTEITEM>
+          <PALETTEITEM>PhaseClass</PALETTEITEM>
+          <!--<PALETTEITEM>Association</PALETTEITEM>	-->
+          <PALETTEITEM>IterationPrecedence</PALETTEITEM>
+          <PALETTEITEM>Artifact</PALETTEITEM>
+          <PALETTEITEM>Generate</PALETTEITEM>
+          <PALETTEITEM>RelationIterationPhase</PALETTEITEM>
+        </PALETTEITEMLIST>
+      </PALETTE>
+
+    </PALETTELIST>
+
+    <DIAGRAMTYPELIST>
+      <DIAGRAMTYPE>
+        <NAME>PrecedenceDiagram</NAME>
+        <DISPLAYNAME>Precedence Diagram</DISPLAYNAME>
+        <BASEDIAGRAM>UseCaseDiagram</BASEDIAGRAM>
+        <ICON>PrecedenceModel.bmp</ICON>
+        <AVAILABLEPALETTELIST>
+          <AVAILABLEPALETTE>Precedence</AVAILABLEPALETTE>
+        </AVAILABLEPALETTELIST>
+      </DIAGRAMTYPE>
+
+      <DIAGRAMTYPE>
+        <NAME>IterationDiagram</NAME>
+        <DISPLAYNAME>Iteration Diagram</DISPLAYNAME>
+        <BASEDIAGRAM>ClassDiagram</BASEDIAGRAM>
+        <ICON>ImplementationModel.bmp</ICON>
+        <AVAILABLEPALETTELIST>
+          <AVAILABLEPALETTE>IterationState</AVAILABLEPALETTE>
+        </AVAILABLEPALETTELIST>
+      </DIAGRAMTYPE>
+    </DIAGRAMTYPELIST>
+
+  </BODY>
+</PROFILE>

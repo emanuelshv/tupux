@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PROFILE version="1.0">
+  <HEADER>
+    <NAME>PES</NAME>
+    <DISPLAYNAME>PES Profile</DISPLAYNAME>
+    <DESCRIPTION>PES Profile</DESCRIPTION>
+    <AUTOINCLUDE>True</AUTOINCLUDE>
+  </HEADER>
+  <BODY>
+    <STEREOTYPELIST>
+      <STEREOTYPE>
+        <NAME>Requeriment</NAME>
+        <DESCRIPTION>Requeriment</DESCRIPTION>
+        <BASECLASSES>
+          <BASECLASS>UMLClass</BASECLASS>
+        </BASECLASSES>
+        <PARENT></PARENT>
+        <RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+        <ICON  minWidth="50" minHeight="37">requisito.wmf</ICON>
+        <SMALLICON>requeriment.bmp</SMALLICON>
+      </STEREOTYPE>
+
+      <STEREOTYPE>
+        <NAME>Requeriment Model</NAME>
+        <DESCRIPTION>Requeriment Model</DESCRIPTION>
+        <BASECLASSES>
+          <BASECLASS>UMLModel</BASECLASS>
+        </BASECLASSES>
+        <PARENT></PARENT>
+        <RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+        <ICON>requisito.wmf</ICON>
+      </STEREOTYPE>
+
+      <STEREOTYPE>
+        <NAME>Flow</NAME>
+        <DESCRIPTION>UseCase Flow</DESCRIPTION>
+        <BASECLASSES>
+          <BASECLASS>UMLClass</BASECLASS>
+        </BASECLASSES>
+      </STEREOTYPE>
+
+      <STEREOTYPE>
+        <NAME>Step</NAME>
+        <DESCRIPTION>Step Flow</DESCRIPTION>
+        <BASECLASSES>
+          <BASECLASS>UMLAttribute</BASECLASS>
+        </BASECLASSES>
+      </STEREOTYPE>
+    </STEREOTYPELIST>
+
+    <TAGDEFINITIONSETLIST>
+
+      <TAGDEFINITIONSET>
+        <NAME>Specification - UseCase</NAME>
+        <BASECLASSES>
+          <BASECLASS>UMLUseCase</BASECLASS>
+        </BASECLASSES>
+        <TAGDEFINITIONLIST>
+          <TAGDEFINITION lock="false">
+            <NAME>type</NAME>
+            <TAGTYPE>String</TAGTYPE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="false">
+            <NAME>purpose</NAME>
+            <TAGTYPE>String</TAGTYPE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="false">
+            <NAME>resume</NAME>
+            <TAGTYPE>String</TAGTYPE>
+          </TAGDEFINITION>
+          <!--TAGDEFINITION lock="false">
+						<NAME>Requeriments</NAME>
+						<TAGTYPE referenceType="UMLClass">Collection</TAGTYPE>
+					</TAGDEFINITION-->
+        </TAGDEFINITIONLIST>
+      </TAGDEFINITIONSET>
+
+      <TAGDEFINITIONSET>
+        <NAME>Specification - Flow</NAME>
+        <BASECLASSES>
+          <BASECLASS>UMLClass</BASECLASS>
+        </BASECLASSES>
+        <TAGDEFINITIONLIST>
+          <TAGDEFINITION lock="false">
+            <NAME>type</NAME>
+            <TAGTYPE>String</TAGTYPE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="false">
+            <NAME>description</NAME>
+            <TAGTYPE>String</TAGTYPE>
+          </TAGDEFINITION>
+        </TAGDEFINITIONLIST>
+      </TAGDEFINITIONSET>
+
+      <TAGDEFINITIONSET>
+        <NAME>Specification - StepFlow</NAME>
+        <BASECLASSES>
+          <BASECLASS>UMLAttribute</BASECLASS>
+        </BASECLASSES>
+        <TAGDEFINITIONLIST>
+          <TAGDEFINITION lock="false">
+            <NAME>type</NAME>
+            <TAGTYPE>String</TAGTYPE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="false">
+            <NAME>stepNumber</NAME>
+            <TAGTYPE>Number</TAGTYPE>
+          </TAGDEFINITION>
+        </TAGDEFINITIONLIST>
+      </TAGDEFINITIONSET>
+
+      <TAGDEFINITIONSET>
+        <NAME>Requeriment</NAME>
+        <BASECLASSES>
+          <BASECLASS>UMLClass</BASECLASS>
+        </BASECLASSES>
+        <TAGDEFINITIONLIST>
+          <TAGDEFINITION lock="false">
+            <NAME>type</NAME>
+            <TAGTYPE>String</TAGTYPE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="false">
+            <NAME>dificulty</NAME>
+            <TAGTYPE>String</TAGTYPE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="false">
+            <NAME>priority</NAME>
+            <TAGTYPE>String</TAGTYPE>
+          </TAGDEFINITION>
+          <TAGDEFINITION lock="false">
+            <NAME>description</NAME>
+            <TAGTYPE>String</TAGTYPE>
+          </TAGDEFINITION>
+        </TAGDEFINITIONLIST>
+      </TAGDEFINITIONSET>
+
+    </TAGDEFINITIONSETLIST>
+
+    <ELEMENTPROTOTYPELIST>
+      <ELEMENTPROTOTYPE>
+        <NAME>Requeriment</NAME>
+        <DISPLAYNAME>Requeriment</DISPLAYNAME>
+        <ICON>requeriment.bmp</ICON>
+        <DRAGTYPE>Rect</DRAGTYPE>
+        <BASEELEMENT>Class</BASEELEMENT>
+        <STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+        <STEREOTYPENAME>Requeriment</STEREOTYPENAME>
+        <SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+      </ELEMENTPROTOTYPE>
+
+      <ELEMENTPROTOTYPE>
+        <NAME>Composite</NAME>
+        <DISPLAYNAME>Composite</DISPLAYNAME>
+        <ICON>composite.bmp</ICON>
+        <DRAGTYPE>Line</DRAGTYPE>
+        <BASEELEMENT argument="3">Association</BASEELEMENT>
+      </ELEMENTPROTOTYPE>
+    </ELEMENTPROTOTYPELIST>
+
+    <MODELPROTOTYPELIST>
+      <MODELPROTOTYPE>
+        <NAME>Requeriment Model</NAME>
+        <DISPLAYNAME>Requeriment Model</DISPLAYNAME>
+        <ICON>requisito.wmf</ICON>
+        <BASEMODEL>Model</BASEMODEL>
+        <STEREOTYPENAME>Requeriment Model</STEREOTYPENAME>
+        <CONTAINERMODELLIST>
+          <CONTAINERMODEL type="UMLProject"/>
+        </CONTAINERMODELLIST>
+      </MODELPROTOTYPE>
+    </MODELPROTOTYPELIST>
+
+    <PALETTELIST>
+      <PALETTE>
+        <NAME>Requeriment</NAME>
+        <DISPLAYNAME>Requeriment</DISPLAYNAME>
+        <PALETTEITEMLIST>
+          <PALETTEITEM>Requeriment</PALETTEITEM>
+          <PALETTEITEM>Composite</PALETTEITEM>
+        </PALETTEITEMLIST>
+      </PALETTE>
+    </PALETTELIST>
+
+    <DIAGRAMTYPELIST>
+      <DIAGRAMTYPE>
+        <NAME>Requeriment Diagram</NAME>
+        <DISPLAYNAME>Requeriment Diagram</DISPLAYNAME>
+        <BASEDIAGRAM>ClassDiagram</BASEDIAGRAM>
+        <ICON>requisito.wmf</ICON>
+        <AVAILABLEPALETTELIST>
+          <AVAILABLEPALETTE>Requeriment</AVAILABLEPALETTE>
+        </AVAILABLEPALETTELIST>
+      </DIAGRAMTYPE>
+    </DIAGRAMTYPELIST>
+
+  </BODY>
+</PROFILE>

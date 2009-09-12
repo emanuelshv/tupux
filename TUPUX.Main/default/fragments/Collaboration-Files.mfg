@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XPD:MODELFRAGMENT xmlns:XPD="http://www.staruml.com" version="1">
+<XPD:HEADER>
+</XPD:HEADER>
+<XPD:BODY>
+<XPD:OBJ name="DocumentElement" type="UMLModel" guid="9STfcqaVM0iPZsq3bfGIOwAA">
+<XPD:ATTR name="Name" type="string">Autogenerate</XPD:ATTR>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLUseCaseDiagram" guid="8Zu3e+2Qo0urZQTLZGv+6gAA">
+<XPD:ATTR name="Name" type="string">CollagorationFilesDiagram</XPD:ATTR>
+<XPD:ATTR name="DiagramType" type="string">TransactionDiagram</XPD:ATTR>
+<XPD:REF name="DiagramOwner">9STfcqaVM0iPZsq3bfGIOwAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLUseCaseDiagramView" guid="wubyOWhWTE+QPaJ5dSzbTwAA">
+<XPD:REF name="Diagram">8Zu3e+2Qo0urZQTLZGv+6gAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:BODY>
+</XPD:MODELFRAGMENT>

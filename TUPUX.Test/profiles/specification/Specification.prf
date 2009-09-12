@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PROFILE version="1.0">
+    <HEADER>
+        <NAME>PES</NAME>
+        <DISPLAYNAME>PES Profile</DISPLAYNAME>
+        <DESCRIPTION>PES Profile</DESCRIPTION>
+        <AUTOINCLUDE>True</AUTOINCLUDE>
+    </HEADER>
+    <BODY>
+        <STEREOTYPELIST>
+            <!--
+            <STEREOTYPE>
+                <NAME>...</NAME>
+                <DESCRIPTION>...</DESCRIPTION>
+                <BASECLASSES>
+                    <BASECLASS>...</BASECLASS>
+                    ...
+                </BASECLASSES>
+                <PARENT>...</PARENT>
+                <RELATEDTAGDEFINITIONSET>...</RELATEDTAGDEFINITIONSET>
+                <SMALLICON>...</SMALLICON>
+                <ICON minWidth="..." minHeight=”...”>...</ICON>
+                <NOTATION>...</NOTATION>
+            </STEREOTYPE>
+            -->
+
+            <STEREOTYPE>
+                <NAME>Requisito Name</NAME>
+                <DESCRIPTION>Requisito Description</DESCRIPTION>
+                <BASECLASSES>
+                    <BASECLASS>UMLClass</BASECLASS>
+                </BASECLASSES>
+                <PARENT></PARENT>
+                <RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+                <ICON>requisito.wmf</ICON>
+            </STEREOTYPE>
+
+            <STEREOTYPE>
+                <NAME>Basic Flow</NAME>
+                <DESCRIPTION>Basic Flow</DESCRIPTION>
+                <BASECLASSES>
+                    <BASECLASS>UMLClass</BASECLASS>
+                </BASECLASSES>
+            </STEREOTYPE>
+
+            <STEREOTYPE>
+                <NAME>Alternative Flow</NAME>
+                <DESCRIPTION>Alternative Flow</DESCRIPTION>
+                <BASECLASSES>
+                    <BASECLASS>UMLClass</BASECLASS>
+                </BASECLASSES>
+            </STEREOTYPE>
+
+            <STEREOTYPE>
+                <NAME>Exceptional Flow</NAME>
+                <DESCRIPTION>Exceptional Flow</DESCRIPTION>
+                <BASECLASSES>
+                    <BASECLASS>UMLClass</BASECLASS>
+                </BASECLASSES>
+            </STEREOTYPE>
+
+            <STEREOTYPE>
+                <NAME>Step Flow</NAME>
+                <DESCRIPTION>Step Flow</DESCRIPTION>
+                <BASECLASSES>
+                    <BASECLASS>UMLAttribute</BASECLASS>
+                </BASECLASSES>
+            </STEREOTYPE>
+
+            <STEREOTYPE>
+                <NAME>Sistema</NAME>
+                <DESCRIPTION>Sistema</DESCRIPTION>
+                <BASECLASSES>
+                    <BASECLASS>UMLAttribute</BASECLASS>
+                </BASECLASSES>
+            </STEREOTYPE>
+        </STEREOTYPELIST>
+
+        <TAGDEFINITIONSETLIST>
+		
+			<TAGDEFINITIONSET>
+                <NAME>Specification - UseCase</NAME>
+                <BASECLASSES>
+                    <BASECLASS>UMLUseCase</BASECLASS>
+                </BASECLASSES>
+                <TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="false">
+						<NAME>type</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION lock="false">
+						<NAME>purpose</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION lock="false">
+						<NAME>resume</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+                </TAGDEFINITIONLIST>
+            </TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+                <NAME>Specification - StepFlow</NAME>
+                <BASECLASSES>
+                    <BASECLASS>UMLAttribute</BASECLASS>
+                </BASECLASSES>
+                <TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="false">
+						<NAME>type</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+                </TAGDEFINITIONLIST>
+            </TAGDEFINITIONSET>
+			
+			<TAGDEFINITIONSET>
+                <NAME>Specification - Flow</NAME>
+                <BASECLASSES>
+                    <BASECLASS>UMLClass</BASECLASS>
+                </BASECLASSES>
+                <TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="false">
+						<NAME>description</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+                </TAGDEFINITIONLIST>
+            </TAGDEFINITIONSET>
+			
+
+			
+        </TAGDEFINITIONSETLIST>
+
+        <!--
+
+
+        <ELEMENTPROTOTYPELIST>
+        </ELEMENTPROTOTYPELIST>
+
+        <MODELPROTOTYPELIST>
+        </MODELPROTOTYPELIST>
+        -->
+
+        <PALETTELIST>
+
+        </PALETTELIST>
+
+        <!--
+        <DIAGRAMTYPELIST>
+        </DIAGRAMTYPELIST>
+        -->
+
+    </BODY>
+</PROFILE>

@@ -1,0 +1,32 @@
+
+
+(notation
+  (onarrange
+    (sequence
+      (mofsetattr (mofref view 'NameLabel') 'Visible' true)
+	  (mofsetattr (mofref view 'StereotypeLabel') 'Visible' true)
+	  (mofsetattr (mofref view 'NameLabel') 'FontColor' 'clRed')
+	  (mofsetattr (mofref view 'StereotypeLabel') 'FontColor' 'clRed')	  
+    )
+  )
+  (ondraw
+
+    ////////////////////////////////////////////////////////////////////
+    // draw line
+    //
+
+    (setdefaultstyle)
+    (setpenstyle 'psDash')
+    (setpencolor 'clRed')
+    (polyline points)
+
+    (setpenstyle 'psSolid')
+    (setbrushstyle 'psSolid')
+	(drawEdge 'head' 'esStickArrow')
+
+    (drawobject (mofref view 'NameLabel'))
+
+	(drawobject (mofref view 'StereotypeLabel'))
+      
+  )
+)
