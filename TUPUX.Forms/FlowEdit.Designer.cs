@@ -42,7 +42,7 @@ namespace TUPUX.Forms
             this.typeCustomComboBox = new TUPUX.Controls.CustomComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.uMLStepFlowCollectionDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uMLStepFlowCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uMLStepFlowCollectionBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -210,6 +210,7 @@ namespace TUPUX.Forms
             this.uMLStepFlowCollectionDataGridView.Size = new System.Drawing.Size(581, 357);
             this.uMLStepFlowCollectionDataGridView.TabIndex = 3;
             this.uMLStepFlowCollectionDataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.uMLStepFlowCollectionDataGridView_UserDeletingRow);
+            this.uMLStepFlowCollectionDataGridView.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.uMLStepFlowCollectionDataGridView_UserDeletedRow);
             this.uMLStepFlowCollectionDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.uMLStepFlowCollectionDataGridView_RowsAdded);
             // 
             // dataGridViewTextBoxColumn1
@@ -218,7 +219,12 @@ namespace TUPUX.Forms
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Type";
             this.dataGridViewTextBoxColumn1.FillWeight = 50F;
             this.dataGridViewTextBoxColumn1.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn1.Items.AddRange(new object[] {
+            "User",
+            "System"});
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -353,10 +359,12 @@ namespace TUPUX.Forms
             // uMLStepFlowCollectionBindingNavigatorSaveItem
             // 
             this.uMLStepFlowCollectionBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.uMLStepFlowCollectionBindingNavigatorSaveItem.Enabled = false;
             this.uMLStepFlowCollectionBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("uMLStepFlowCollectionBindingNavigatorSaveItem.Image")));
             this.uMLStepFlowCollectionBindingNavigatorSaveItem.Name = "uMLStepFlowCollectionBindingNavigatorSaveItem";
             this.uMLStepFlowCollectionBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.uMLStepFlowCollectionBindingNavigatorSaveItem.Text = "Save Data";
+            this.uMLStepFlowCollectionBindingNavigatorSaveItem.Visible = false;
             this.uMLStepFlowCollectionBindingNavigatorSaveItem.Click += new System.EventHandler(this.uMLStepFlowCollectionBindingNavigatorSaveItem_Click);
             // 
             // FlowEdit
@@ -406,7 +414,7 @@ namespace TUPUX.Forms
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton uMLStepFlowCollectionBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
 
     }

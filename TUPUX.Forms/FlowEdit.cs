@@ -78,7 +78,7 @@ namespace TUPUX.Forms
 
         private void uMLStepFlowCollectionDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            
+
         }
 
         private void uMLStepFlowCollectionDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
@@ -111,12 +111,13 @@ namespace TUPUX.Forms
             UMLStepFlow stepFlow = new UMLStepFlow();
             stepFlow.Owner = this.Flow;
             stepFlow.Name = "";
+            stepFlow.Type = "User";
             e.NewObject = stepFlow;
         }
 
         private void uMLStepFlowCollectionBindingSource_ListChanged(object sender, ListChangedEventArgs e)
         {
-            if (e.ListChangedType == ListChangedType.ItemAdded)
+            if (e.ListChangedType == ListChangedType.ItemAdded || e.ListChangedType == ListChangedType.ItemChanged)
             {
                 UMLStepFlow stepFlow = this.uMLStepFlowCollectionBindingSource[e.NewIndex] as UMLStepFlow;
                 stepFlow.Save();
@@ -126,12 +127,19 @@ namespace TUPUX.Forms
 
         private void uMLStepFlowCollectionBindingSource_CurrentChanged(object sender, EventArgs e)
         {
+            /*
             UMLStepFlow stepFlow = this.uMLStepFlowCollectionBindingSource.Current as UMLStepFlow;
 
             if (stepFlow != null)
             {
                 stepFlow.Save();
             }
+            */ 
+        }
+
+        private void uMLStepFlowCollectionDataGridView_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
+        {
+
         }
 
         #region Button Methods
