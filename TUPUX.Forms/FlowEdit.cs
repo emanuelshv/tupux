@@ -49,9 +49,9 @@ namespace TUPUX.Forms
         private void FlowEdit_Load(object sender, EventArgs e)
         {
             this.typeCustomComboBox.DataSource = Properties.Settings.Default.FlowType;
-            this.typeCustomComboBox1.DataSource = Properties.Settings.Default.StepFlowType;
+            //this.typeCustomComboBox1.DataSource = Properties.Settings.Default.StepFlowType;
 
-            this.LockStepFlowControls(true);
+            //this.LockStepFlowControls(true);
         }
         #endregion
 
@@ -71,7 +71,71 @@ namespace TUPUX.Forms
 
         #endregion
 
+        private void uMLStepFlowCollectionBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void uMLStepFlowCollectionDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            
+        }
+
+        private void uMLStepFlowCollectionDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            UMLStepFlow item = e.Row.DataBoundItem as UMLStepFlow;
+            //if (item != null)
+            //{
+                //UMLStepFlow item = uMLStepFlowCollectionBindingSource.Current as UMLStepFlow;
+
+                if (item != null)
+                {
+                    DialogResult result = MessageBox.Show(this, "Are you sure?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    switch (result)
+                    {
+                        case DialogResult.Yes:
+                            item.Delete();
+                            //uMLStepFlowCollectionBindingSource.RemoveCurrent();
+                            break;
+                        default:
+                            e.Cancel = true;
+                            break;
+                    }
+                }
+            //}
+        }
+
+        private void uMLStepFlowCollectionBindingSource_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            UMLStepFlow stepFlow = new UMLStepFlow();
+            stepFlow.Owner = this.Flow;
+            stepFlow.Name = "";
+            e.NewObject = stepFlow;
+        }
+
+        private void uMLStepFlowCollectionBindingSource_ListChanged(object sender, ListChangedEventArgs e)
+        {
+            if (e.ListChangedType == ListChangedType.ItemAdded)
+            {
+                UMLStepFlow stepFlow = this.uMLStepFlowCollectionBindingSource[e.NewIndex] as UMLStepFlow;
+                stepFlow.Save();
+            }
+
+        }
+
+        private void uMLStepFlowCollectionBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            UMLStepFlow stepFlow = this.uMLStepFlowCollectionBindingSource.Current as UMLStepFlow;
+
+            if (stepFlow != null)
+            {
+                stepFlow.Save();
+            }
+        }
+
         #region Button Methods
+        /*
         private void newButton_Click(object sender, EventArgs e)
         {
             UMLStepFlow stepFlow = new UMLStepFlow();
@@ -89,7 +153,7 @@ namespace TUPUX.Forms
             this.saveButton.Enabled = true;
             this.removeButton.Enabled = false;
         }
-
+        
         private void saveButton_Click(object sender, EventArgs e)
         {
             if (this.uMLStepFlowBindingSource.Current != null)
@@ -193,9 +257,11 @@ namespace TUPUX.Forms
                 }
             }
         }
+        */
         #endregion
 
         #region uMLStepFlowCollectionBindingSource Events
+        /*
         private void uMLStepFlowCollectionBindingSource_PositionChanged(object sender, EventArgs e)
         {
             if (this.uMLStepFlowCollectionBindingSource.Current != null)
@@ -219,9 +285,11 @@ namespace TUPUX.Forms
                 this.removeButton.Enabled = false;
             }
         }
+        */
         #endregion
 
         #region Utils
+        /*
         private void LockStepFlowControls(bool locked)
         {
             Color backColor;
@@ -236,6 +304,7 @@ namespace TUPUX.Forms
             this.nameTextBox1.ReadOnly = locked;
             //this.descriptionTextBox.ReadOnly = locked;
         }
+        */
         #endregion
     }
 }
