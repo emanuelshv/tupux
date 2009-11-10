@@ -99,7 +99,7 @@
           <BASECLASS>UMLAssociation</BASECLASS>
         </BASECLASSES>
         <TAGDEFINITIONLIST>
-          <TAGDEFINITION lock="False">
+          <TAGDEFINITION lock="True">
             <NAME>Dependency Type</NAME>
             <TAGTYPE>Enumeration</TAGTYPE>
             <DEFAULTDATAVALUE>Dependent</DEFAULTDATAVALUE>
