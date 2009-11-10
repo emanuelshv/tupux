@@ -100,6 +100,11 @@ namespace TUPUX.Entity
             return this.GetDependencyCollection<UMLRealization, UMLRealizationCollection>();
         }
 
+        public UMLDependencyCollection GetDependencies()
+        {
+            return this.GetDependencyCollection<UMLDependency, UMLDependencyCollection>();
+        }
+
 
         private UMLAttributeCollection GetAttributes()
         {

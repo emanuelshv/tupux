@@ -47,6 +47,17 @@ namespace TUPUX.Entity
                     realization.Supplier = Helper.GetDependencySupplier<UMLClass>(realization.Guid);
                     relationships.Add(realization.Guid, realization);
                 }
+
+                UMLDependencyCollection dependencyCollection = var.GetDependencies();
+
+                foreach (UMLDependency dependency in dependencyCollection)
+                {
+                    dependency.Client = Helper.GetDependencyClient<UMLClass>(dependency.Guid);
+                    dependency.Supplier = Helper.GetDependencySupplier<UMLClass>(dependency.Guid);
+                    relationships.Add(dependency.Guid, dependency);
+                }
+
+                
             }
 
             return relationships;

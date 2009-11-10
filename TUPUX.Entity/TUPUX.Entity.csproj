@@ -75,6 +75,8 @@
     <Compile Include="UMLAssociationEndCollection.cs" />
     <Compile Include="UMLClass.cs" />
     <Compile Include="UMLClassCollection.cs" />
+    <Compile Include="UMLDependency.cs" />
+    <Compile Include="UMLDependencyCollection.cs" />
     <Compile Include="UMLEnumeration.cs" />
     <Compile Include="UMLEnumerationCollection.cs" />
     <Compile Include="UMLEnumerationLiteral.cs" />

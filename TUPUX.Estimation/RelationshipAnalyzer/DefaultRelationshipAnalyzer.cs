@@ -29,22 +29,46 @@ namespace TUPUX.Estimation.RelationshipAnalyzer
             int tdets;
             UMLAttribute tattrib;
 
+            //0. Pre-Pre-Processing (set dependencies in relationships)
+            foreach (DictionaryEntry entry in relationships)
+            {
+                UMLRelationship r = (UMLRelationship)entry.Value;
+
+                if (r is UMLDependency)
+                {
+                    foreach (DictionaryEntry entry2 in relationships)
+                    {
+                        UMLRelationship q = (UMLRelationship)entry2.Value;
+
+                        if (q is UMLAssociation) {
+                            if ((((UMLDependency)r).Client.Guid.Equals(((UMLAssociation)q).End1.Participant.Guid)) && (((UMLDependency)r).Supplier.Guid.Equals(((UMLAssociation)q).End2.Participant.Guid)) || (((UMLDependency)r).Client.Guid.Equals(((UMLAssociation)q).End2.Participant.Guid)) && (((UMLDependency)r).Supplier.Guid.Equals(((UMLAssociation)q).End1.Participant.Guid))) {
+                                ((UMLAssociation)q).DependencyType = "D";
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
             //1. PreFile Generation (Pre-Processing)
             foreach (DictionaryEntry entry in relationships)
             {
                 UMLRelationship r = (UMLRelationship)entry.Value;
 
-                ActionKey key = new ActionKey(r);
-
-                AbstractAction action = map.GetAction(key);
-
-                if (action != null)
+                if (!(r is UMLDependency))
                 {
-                    action.Execute(r, map, prefiles);
-                }
-                else
-                {
-                    throw new ArgumentException("There is no defined action for the actionKey given.");
+                    ActionKey key = new ActionKey(r);
+
+                    AbstractAction action = map.GetAction(key);
+
+                    if (action != null)
+                    {
+                        action.Execute(r, map, prefiles);
+                    }
+                    else
+                    {
+                        throw new ArgumentException("There is no defined action for the actionKey given.");
+                    }
                 }
             }
 
@@ -98,27 +122,27 @@ namespace TUPUX.Estimation.RelationshipAnalyzer
                         foreach (UMLClass c in ret.Classes)
                         {
                             tnamemap[c.Name] = c.Name;
-
+                            
                             tret.Classes.Add(c);
 
-                            if (!(tclasses.ContainsKey(c.Name)))
-                            {
-                                tclasses[c.Name] = c;
-                                c.LoadAttributes();
-                                tdets += c.Attributes.Count;
-                                foreach (UMLAttribute attrib in c.Attributes)
+                                if (!(tclasses.ContainsKey(c.Name)))
                                 {
-                                    tattrib = new UMLAttribute();
-                                    tattrib.Name = c.Name + "." + attrib.Name;
-                                    tfile.Attributes.Add(tattrib);
+                                    tclasses[c.Name] = c;
+                                    c.LoadAttributes();
+                                    tdets += c.Attributes.Count;
+                                    foreach (UMLAttribute attrib in c.Attributes)
+                                    {
+                                        tattrib = new UMLAttribute();
+                                        tattrib.Name = c.Name + "." + attrib.Name;
+                                        tfile.Attributes.Add(tattrib);
+                                    }
                                 }
-                            }
                         }
 
                         tfile.RetsCollection.Add(tret);
                     }
-
-                    foreach (KeyValuePair<String, String> kvp in tnamemap)
+                    
+                    foreach (KeyValuePair<String,String> kvp in tnamemap)
                     {
                         tname += kvp.Value + "_";
                     }
@@ -127,7 +151,7 @@ namespace TUPUX.Estimation.RelationshipAnalyzer
                     tname = tname.Remove(tname.Length - 1, 1);
                     //limit File name size to 50 chars (could cause name collisions)
                     tfile.Name = tname.Length > 50 ? tname.Substring(1, 50) : tname;
-
+                    
                     files.Add(tfile);
                 }
 
