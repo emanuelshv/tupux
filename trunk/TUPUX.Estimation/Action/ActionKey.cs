@@ -175,26 +175,42 @@ namespace TUPUX.Estimation.Action
                     default: end2mult = MultiplicityType.MANY; break;
                 }
 
-                //if (((UMLAssociation)r).DependencyType.Equals("Dependent"))
-                if (((UMLAssociation)r).Stereotype != null)
-                {
-                    if (((UMLAssociation)r).Stereotype.Equals("D"))
-                    {
-                        dependency = "D";
-                    }
-                    else if (((UMLAssociation)r).Stereotype.Equals("I"))
-                    {
-                        dependency = "I";
-                    }
-                    else
-                    {
-                        throw new ArgumentException("Only dependent and independent dependency-types are allowed.");
-                    }
-                }
-                else
+                if (end1type.Equals(EndType.COMPOSITION) ||
+                    end2type.Equals(EndType.COMPOSITION))                
                 {
                     dependency = "D";
                 }
+                else
+                {
+                    if (((UMLAssociation)r).DependencyType.Equals("D"))
+                    {
+                        dependency = "D";
+                    }
+                    else
+                    {
+                        dependency = "I";
+                    }
+                }
+                
+                //if (((UMLAssociation)r).Stereotype != null)
+                //{
+                //    if (((UMLAssociation)r).Stereotype.Equals("D"))
+                //    {
+                //        dependency = "D";
+                //    }
+                //    else if (((UMLAssociation)r).Stereotype.Equals("I"))
+                //    {
+                //        dependency = "I";
+                //    }
+                //    else
+                //    {
+                //        throw new ArgumentException("Only dependent and independent dependency-types are allowed.");
+                //    }
+                //}
+                //else
+                //{
+                //    dependency = "D";
+                //}
 
                 //FIN_HARDCODE
                 this._key = end1type + end2type + end1mult + end2mult + dependency;

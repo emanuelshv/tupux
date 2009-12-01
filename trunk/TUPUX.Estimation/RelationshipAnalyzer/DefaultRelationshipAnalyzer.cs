@@ -41,7 +41,10 @@ namespace TUPUX.Estimation.RelationshipAnalyzer
                         UMLRelationship q = (UMLRelationship)entry2.Value;
 
                         if (q is UMLAssociation) {
-                            if ((((UMLDependency)r).Client.Guid.Equals(((UMLAssociation)q).End1.Participant.Guid)) && (((UMLDependency)r).Supplier.Guid.Equals(((UMLAssociation)q).End2.Participant.Guid)) || (((UMLDependency)r).Client.Guid.Equals(((UMLAssociation)q).End2.Participant.Guid)) && (((UMLDependency)r).Supplier.Guid.Equals(((UMLAssociation)q).End1.Participant.Guid))) {
+                            if ((((UMLDependency)r).Client.Guid.Equals(((UMLAssociation)q).End1.Participant.Guid)) 
+                                && (((UMLDependency)r).Supplier.Guid.Equals(((UMLAssociation)q).End2.Participant.Guid)) 
+                                || (((UMLDependency)r).Client.Guid.Equals(((UMLAssociation)q).End2.Participant.Guid))
+                                && (((UMLDependency)r).Supplier.Guid.Equals(((UMLAssociation)q).End1.Participant.Guid))) {
                                 ((UMLAssociation)q).DependencyType = "D";
                             }
                         }
