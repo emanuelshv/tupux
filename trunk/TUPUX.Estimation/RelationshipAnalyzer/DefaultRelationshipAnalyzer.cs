@@ -151,6 +151,7 @@ namespace TUPUX.Estimation.RelationshipAnalyzer
                     }
 
                     tfile.Dets = tdets;
+                    tfile.Dets += prefile.DefaultDets;
                     tname = tname.Remove(tname.Length - 1, 1);
                     //limit File name size to 50 chars (could cause name collisions)
                     tfile.Name = tname.Length > 50 ? tname.Substring(1, 50) : tname;

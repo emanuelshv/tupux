@@ -10,6 +10,7 @@ namespace TUPUX.Estimation.File
         //Attributes
         #region Attributes
         private List<PreRET> rets;
+        private int defaultDets = 0;
         #endregion
 
         //Constructors
@@ -26,6 +27,12 @@ namespace TUPUX.Estimation.File
         {
             get { return rets; }
             set { rets = value; }
+        }
+
+        public int DefaultDets
+        {
+            get { return defaultDets; }
+            set { defaultDets = value; }
         }
         #endregion
 
