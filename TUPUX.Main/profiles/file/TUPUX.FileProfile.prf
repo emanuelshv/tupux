@@ -102,10 +102,10 @@
           <TAGDEFINITION lock="True">
             <NAME>Dependency Type</NAME>
             <TAGTYPE>Enumeration</TAGTYPE>
-            <DEFAULTDATAVALUE>Dependent</DEFAULTDATAVALUE>
+            <DEFAULTDATAVALUE>I</DEFAULTDATAVALUE>
             <LITERALS>
-              <LITERAL>Dependent</LITERAL>
-              <LITERAL>Independent</LITERAL>
+              <LITERAL>D</LITERAL>
+              <LITERAL>I</LITERAL>
             </LITERALS>
           </TAGDEFINITION>
         </TAGDEFINITIONLIST>
