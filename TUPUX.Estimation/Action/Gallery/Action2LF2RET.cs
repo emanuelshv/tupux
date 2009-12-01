@@ -18,27 +18,31 @@ namespace TUPUX.Estimation.Action.Gallery
         {
             UMLClass a=null;
             UMLClass b=null;
+            int defaultDetsA = 0;
+            int defaultDetsB = 0;
             PreFile temp;
 
-            RelationshipHelper.GetClasses(r, ref a, ref b, this.IsAlternate);
+            RelationshipHelper.GetClasses(r, ref a, ref b, this.IsAlternate, ref defaultDetsA, ref defaultDetsB);
 
             //1st File
             if ((temp = PreFileHelper.GetPreFileWithClass(a, prefiles)) == null)
             {
                 temp = new PreFile();
                 temp.Rets.Add(new PreRET());
-                temp.Rets[0].Classes.Add(a);
+                temp.Rets[0].Classes.Add(a);                
                 prefiles.Add(temp);
             }
+            temp.DefaultDets += defaultDetsA;
 
             //2nd File
             if ((temp = PreFileHelper.GetPreFileWithClass(b, prefiles)) == null)
             {
                 temp = new PreFile();
                 temp.Rets.Add(new PreRET());
-                temp.Rets[0].Classes.Add(b);
+                temp.Rets[0].Classes.Add(b);                
                 prefiles.Add(temp);
             }
+            temp.DefaultDets += defaultDetsB;
 
             //3rd File (only if there is an Association-Class)
             if (r is UMLAssociation)

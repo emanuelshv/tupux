@@ -147,6 +147,7 @@ namespace TUPUX.Estimation
             foreach (UMLFile file in files)
             {
                 file.Owner = package;
+                file.Stereotype = TUPUX.Entity.Constants.UMLFile.STEREOTYPE;
                 file.Save();
                 foreach (UMLAttribute a in file.Attributes)
                 {

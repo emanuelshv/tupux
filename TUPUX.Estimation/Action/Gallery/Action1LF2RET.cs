@@ -14,11 +14,13 @@ namespace TUPUX.Estimation.Action.Gallery
             UMLClass a = null;
             UMLClass b = null;
             UMLClass ac = null;
+            int defaultDetsA = 0;
+            int defaultDetsB = 0;
             PreFile prefA;
             PreFile prefB;
             PreRET temp;
 
-            RelationshipHelper.GetClasses(r, ref a, ref b, this.IsAlternate);
+            RelationshipHelper.GetClasses(r, ref a, ref b, this.IsAlternate, ref defaultDetsA, ref defaultDetsB);
 
 
             if (r is UMLAssociation)
