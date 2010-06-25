@@ -17,7 +17,8 @@ namespace TUPUX.Entity
         public const string TagDefinitionFileFP = "Phase File Function Points";
         public const string TagDefinitionActionFP = "Phase Actions Function Points";
         public const string TagDefinitionTotalFP = "Total Function Points";
-
+        public const string TagDefinitionEAFHistory = "EAF History";
+        public const string TagDefinitionProductivityHistory = "Productivity History";
         #endregion
 
         #region Attributes  and Properties
@@ -35,6 +36,10 @@ namespace TUPUX.Entity
         private UMLFileCollection _filesProject;
 
         private UMLIteration _firsIteration;
+
+        private double _productivityHistory;
+
+        private double _EAFHistory;
 
         [UMLTag(UMLProfile.ESTIMATION, Constants.UMLPhase.TDS_ESTIMATION, UMLPhase.TagDefinitionApplyEstimation)]
         public bool ApplyEstimation
@@ -92,6 +97,36 @@ namespace TUPUX.Entity
             }
         }
 
+        [UMLTag(UMLProfile.ESTIMATION, Constants.UMLPhase.TDS_ESTIMATION, UMLPhase.TagDefinitionProductivityHistory)]
+        public double ProductivityHistory
+        {
+            get
+            {
+                return _productivityHistory;
+            }
+            set
+            {
+                _productivityHistory = value;
+                NotifyPropertyChanged("ProductivityHistory");
+            }
+        }
+
+        [UMLTag(UMLProfile.ESTIMATION, Constants.UMLPhase.TDS_ESTIMATION, UMLPhase.TagDefinitionEAFHistory)]
+        public double EAFHistory
+        {
+            get
+            {
+                if (_EAFHistory <= 0)
+                    _EAFHistory = 1;
+                return _EAFHistory;
+            }
+            set
+            {
+                _EAFHistory = value;
+                NotifyPropertyChanged("EAFHistory");
+            }
+        }
+        
         public UMLIterationCollection Iterations
         {
             get
@@ -203,6 +238,11 @@ namespace TUPUX.Entity
 
             if (iteration != null)
             {
+
+                //start EAF
+                iteration.EAFHistory = this.EAFHistory;
+                iteration.ProductivityHistory = this.ProductivityHistory;
+
                 EstimateFunctionPoinsForAllFiles();
                 ClearVariables();
 

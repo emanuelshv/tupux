@@ -373,7 +373,10 @@ namespace TUPUX.Entity
                 TotalFunctionPoints += usecase.TotalFunctionPoints;
             }
 
+            
             EstimatedEffort = Math.Round(TotalFunctionPoints * EstimatedProductivity, 2);
+            
+            RealEffort = Math.Round(TotalFunctionPoints * RealProductivity, 2);
             //this.Save();
         }
                 
@@ -401,17 +404,24 @@ namespace TUPUX.Entity
             this.ClearTagCollection(Constants.UMLProfile.ESTIMATION, Constants.UMLIteration.TDS_ESTIMATION, UMLIteration.TagUseCaseList);
             this.SaveTagCollection<UMLUseCase, UMLUseCaseCollection>(this.UseCases, Constants.UMLProfile.ESTIMATION, Constants.UMLIteration.TDS_ESTIMATION, UMLIteration.TagUseCaseList);
 
-            foreach (UMLFactor factor in Factors)
-            {
-                SetTagValueAsString(Constants.UMLProfile.ESTIMATION, Constants.UMLIteration.TDS_FATORS, factor.DefinitionName, factor.SelectedKey);
-                factor.MarkLoaded();
-            }
+            SaveFactors();
 
             foreach(UMLUseCase usecase in UseCases)
             {
                 usecase.Save();
             }
+
             MarkLoaded();
+        }
+
+        public void SaveFactors()
+        {
+            base.Save();
+            foreach (UMLFactor factor in Factors)
+            {
+                SetTagValueAsString(Constants.UMLProfile.ESTIMATION, Constants.UMLIteration.TDS_FATORS, factor.DefinitionName, factor.SelectedKey);
+                factor.MarkLoaded();
+            }
         }
 
         private void ClearVariables()
@@ -443,7 +453,7 @@ namespace TUPUX.Entity
             }
             else
             {
-                EstimatedProductivity = Math.Round(EAF * Prev.EstimatedProductivity / Prev.EAF, 2);
+                EstimatedProductivity = Math.Round(EAF * Prev.EstimatedProductivity / Prev.EAF, 2);                
             }
         }
         
