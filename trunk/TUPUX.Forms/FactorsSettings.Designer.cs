@@ -220,7 +220,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FactorsSettings";
-            this.Text = "FactorsSettings";
+            this.Text = "Factors Settings";
             ((System.ComponentModel.ISupportInitialize)(this.uMLFactorCollectionDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uMLFactorCollectionBindingSource)).EndInit();
             this.gbxFactors.ResumeLayout(false);

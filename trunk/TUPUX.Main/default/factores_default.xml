@@ -3,7 +3,7 @@
   <UMLFactor>
     <Abbrev>RELY</Abbrev>
     <Name>Required Reliability</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
       <item>
         <key>
@@ -29,7 +29,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -37,7 +37,7 @@
           <double>1.10</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -50,7 +50,7 @@
   <UMLFactor>
     <Abbrev>DATA</Abbrev>
     <Name>Database Size</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
       <item>
         <key>
@@ -68,7 +68,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -76,7 +76,7 @@
           <double>1.14</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -89,9 +89,9 @@
   <UMLFactor>
     <Abbrev>CPLX</Abbrev>
     <Name>Product Complexity</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
-	  <item>
+      <item>
         <key>
           <string>VL</string>
         </key>
@@ -115,7 +115,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -123,7 +123,7 @@
           <double>1.17</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -131,7 +131,7 @@
           <double>1.34</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>EH</string>
         </key>
@@ -139,12 +139,12 @@
           <double>1.74</double>
         </value>
       </item>
-	  </Values>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>RUSE</Abbrev>
     <Name>Required Reuse</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
       <item>
         <key>
@@ -162,7 +162,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -170,7 +170,7 @@
           <double>1.07</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -178,7 +178,7 @@
           <double>1.15</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>EH</string>
         </key>
@@ -186,14 +186,14 @@
           <double>1.24</double>
         </value>
       </item>
-	  </Values>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>DOCU</Abbrev>
     <Name>Documentation</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
-	  <item>
+      <item>
         <key>
           <string>VL</string>
         </key>
@@ -217,7 +217,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -225,20 +225,20 @@
           <double>1.11</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
         <value>
           <double>1.23</double>
         </value>
-      </item>	  
-	  </Values>
+      </item>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>TIME</Abbrev>
     <Name>Execution Time Constraint</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
       <item>
         <key>
@@ -248,7 +248,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -256,7 +256,7 @@
           <double>1.11</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -264,20 +264,20 @@
           <double>1.29</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>EH</string>
         </key>
         <value>
           <double>1.63</double>
         </value>
-      </item>	  
-	  </Values>
+      </item>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>STOR</Abbrev>
     <Name>Main Storage Constraint</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
       <item>
         <key>
@@ -287,7 +287,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -295,7 +295,7 @@
           <double>1.05</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -303,22 +303,22 @@
           <double>1.17</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>EH</string>
         </key>
         <value>
           <double>1.46</double>
         </value>
-      </item>	  
-	  </Values>
+      </item>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>PVOL</Abbrev>
     <Name>Platform Volatility</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
-	  <item>
+      <item>
         <key>
           <string>L</string>
         </key>
@@ -326,7 +326,7 @@
           <double>0.87</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>N</string>
         </key>
@@ -334,7 +334,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -342,7 +342,7 @@
           <double>1.15</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -350,14 +350,14 @@
           <double>1.30</double>
         </value>
       </item>
-	  </Values>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>ACAP</Abbrev>
     <Name>Analyst Capability</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
-	  <item>
+      <item>
         <key>
           <string>VL</string>
         </key>
@@ -365,7 +365,7 @@
           <double>1.42</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>L</string>
         </key>
@@ -373,7 +373,7 @@
           <double>1.19</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>N</string>
         </key>
@@ -381,7 +381,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -389,7 +389,7 @@
           <double>0.85</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -397,14 +397,14 @@
           <double>0.71</double>
         </value>
       </item>
-	  </Values>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>PCAP</Abbrev>
     <Name>Programmer Capability</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
-	  <item>
+      <item>
         <key>
           <string>VL</string>
         </key>
@@ -412,7 +412,7 @@
           <double>1.34</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>L</string>
         </key>
@@ -420,7 +420,7 @@
           <double>1.15</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>N</string>
         </key>
@@ -428,7 +428,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -436,7 +436,7 @@
           <double>0.88</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -444,14 +444,14 @@
           <double>0.76</double>
         </value>
       </item>
-	  </Values>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>PCON</Abbrev>
     <Name>Personnel Continuity</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
-	  <item>
+      <item>
         <key>
           <string>VL</string>
         </key>
@@ -459,7 +459,7 @@
           <double>1.29</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>L</string>
         </key>
@@ -467,7 +467,7 @@
           <double>1.12</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>N</string>
         </key>
@@ -475,7 +475,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -483,7 +483,7 @@
           <double>0.90</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -491,14 +491,14 @@
           <double>0.81</double>
         </value>
       </item>
-	  </Values>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>APEX</Abbrev>
     <Name>Applications Experience</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
-	  <item>
+      <item>
         <key>
           <string>VL</string>
         </key>
@@ -506,7 +506,7 @@
           <double>1.22</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>L</string>
         </key>
@@ -514,7 +514,7 @@
           <double>1.10</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>N</string>
         </key>
@@ -522,7 +522,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -530,7 +530,7 @@
           <double>0.88</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -538,14 +538,14 @@
           <double>0.81</double>
         </value>
       </item>
-	  </Values>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>PLEX</Abbrev>
     <Name>Platform Experience</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
-	  <item>
+      <item>
         <key>
           <string>VL</string>
         </key>
@@ -553,7 +553,7 @@
           <double>1.19</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>L</string>
         </key>
@@ -561,7 +561,7 @@
           <double>1.09</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>N</string>
         </key>
@@ -569,7 +569,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -577,7 +577,7 @@
           <double>0.91</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -585,14 +585,14 @@
           <double>0.85</double>
         </value>
       </item>
-	  </Values>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>LTEX</Abbrev>
     <Name>Language and Toolset Experience</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
-	  <item>
+      <item>
         <key>
           <string>VL</string>
         </key>
@@ -600,7 +600,7 @@
           <double>1.20</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>L</string>
         </key>
@@ -608,7 +608,7 @@
           <double>1.09</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>N</string>
         </key>
@@ -616,7 +616,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -624,7 +624,7 @@
           <double>0.91</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -632,14 +632,14 @@
           <double>0.84</double>
         </value>
       </item>
-	  </Values>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>TOOL</Abbrev>
     <Name>Use of Software Tools</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
-	  <item>
+      <item>
         <key>
           <string>VL</string>
         </key>
@@ -647,7 +647,7 @@
           <double>1.17</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>L</string>
         </key>
@@ -655,7 +655,7 @@
           <double>1.09</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>N</string>
         </key>
@@ -663,7 +663,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -671,7 +671,7 @@
           <double>0.90</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -679,14 +679,14 @@
           <double>0.87</double>
         </value>
       </item>
-	  </Values>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>SITE</Abbrev>
     <Name>Multisite Development</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
-	  <item>
+      <item>
         <key>
           <string>VL</string>
         </key>
@@ -694,7 +694,7 @@
           <double>1.22</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>L</string>
         </key>
@@ -702,7 +702,7 @@
           <double>1.09</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>N</string>
         </key>
@@ -710,7 +710,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -718,7 +718,7 @@
           <double>0.93</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -726,7 +726,7 @@
           <double>0.86</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>EH</string>
         </key>
@@ -734,14 +734,14 @@
           <double>0.80</double>
         </value>
       </item>
-	  </Values>
+    </Values>
   </UMLFactor>
   <UMLFactor>
     <Abbrev>SCED</Abbrev>
     <Name>Required Development Schedule</Name>
-	<Editable>false</Editable>
+    <Editable>false</Editable>
     <Values>
-	  <item>
+      <item>
         <key>
           <string>VL</string>
         </key>
@@ -749,7 +749,7 @@
           <double>1.43</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>L</string>
         </key>
@@ -757,7 +757,7 @@
           <double>1.14</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>N</string>
         </key>
@@ -765,7 +765,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>H</string>
         </key>
@@ -773,7 +773,7 @@
           <double>1.00</double>
         </value>
       </item>
-	  <item>
+      <item>
         <key>
           <string>VH</string>
         </key>
@@ -781,6 +781,6 @@
           <double>1.00</double>
         </value>
       </item>
-	  </Values>
+    </Values>
   </UMLFactor>
 </ArrayOfUMLFactor>

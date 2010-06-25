@@ -10,7 +10,7 @@
     <BODY>
         <MAINMENU>
             <MAINITEM base="TOOLS" caption="Estimation" beginGroup="TRUE"  availableWhen="PROJECT_OPENED" >
-				<MAINITEM caption="Management Estimation" script="TUPUX.management.vbs"/>
+				<!--<MAINITEM caption="Management Estimation" script="TUPUX.management.vbs"/>-->
 				<MAINITEM caption="Generate Estimation" beginGroup="TRUE" script="TUPUX.generate.vbs"/>
 				<MAINITEM caption="Driver Factors Settings" script="TUPUX.driverSettings.vbs" />
         <MAINITEM caption="File Generator" script="TUPUX.fileGenerte.vbs" />
