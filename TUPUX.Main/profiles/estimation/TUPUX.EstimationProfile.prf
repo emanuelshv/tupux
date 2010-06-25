@@ -596,7 +596,7 @@
       <ELEMENTPROTOTYPE>
         <NAME>RelationIterationPhase</NAME>
         <DISPLAYNAME>Relation</DISPLAYNAME>
-        <ICON>precedence.bmp</ICON>
+        <ICON>agregation.bmp</ICON>
         <DRAGTYPE>Line</DRAGTYPE>
         <BASEELEMENT argument="2">Association</BASEELEMENT>
         <SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
@@ -692,8 +692,8 @@
           <PALETTEITEM>PhaseClass</PALETTEITEM>
           <!--<PALETTEITEM>Association</PALETTEITEM>	-->
           <PALETTEITEM>IterationPrecedence</PALETTEITEM>
-          <PALETTEITEM>Artifact</PALETTEITEM>
-          <PALETTEITEM>Generate</PALETTEITEM>
+          <!--<PALETTEITEM>Artifact</PALETTEITEM>-->
+          <!--<PALETTEITEM>Generate</PALETTEITEM>-->
           <PALETTEITEM>RelationIterationPhase</PALETTEITEM>
         </PALETTEITEMLIST>
       </PALETTE>

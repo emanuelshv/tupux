@@ -23,9 +23,11 @@ namespace TUPUX.Entity
                         UMLAssociationEndCollection associationEndCollection = Helper.GetAssociationEndCollection<UMLAssociationEnd, UMLAssociationEndCollection>(association.Guid);
                         association.End1 = associationEndCollection[0];
                         association.End2 = associationEndCollection[1];
+                        
                         association.End1.Participant = Helper.GetAssociationEndParticipant<UMLClass>(associationEndCollection[0].Guid);
                         association.End2.Participant = Helper.GetAssociationEndParticipant<UMLClass>(associationEndCollection[1].Guid);
                         association.AssociationClass = Helper.GetAssociationClass<UMLClass>(association.Guid);
+                        
                         relationships.Add(association.Guid, association);
                     }
                 }

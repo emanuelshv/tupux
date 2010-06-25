@@ -71,6 +71,7 @@ namespace TUPUX.Forms
             this.rfvType = new CustomValidation.RequiredFieldValidator();
             this.groupBoxEstimation = new System.Windows.Forms.GroupBox();
             this.groupBoxInfo = new System.Windows.Forms.GroupBox();
+            this.txtType = new System.Windows.Forms.TextBox();
             generateActionLabel = new System.Windows.Forms.Label();
             actionFunctionPointsLabel = new System.Windows.Forms.Label();
             sendMessageLabel = new System.Windows.Forms.Label();
@@ -113,9 +114,9 @@ namespace TUPUX.Forms
             actionFunctionPointsLabel.AutoSize = true;
             actionFunctionPointsLabel.Location = new System.Drawing.Point(6, 16);
             actionFunctionPointsLabel.Name = "actionFunctionPointsLabel";
-            actionFunctionPointsLabel.Size = new System.Drawing.Size(116, 13);
+            actionFunctionPointsLabel.Size = new System.Drawing.Size(90, 13);
             actionFunctionPointsLabel.TabIndex = 8;
-            actionFunctionPointsLabel.Text = "Action Function Points:";
+            actionFunctionPointsLabel.Text = "Transaction UFP:";
             // 
             // sendMessageLabel
             // 
@@ -131,18 +132,18 @@ namespace TUPUX.Forms
             totalFunctionPointsLabel.AutoSize = true;
             totalFunctionPointsLabel.Location = new System.Drawing.Point(6, 68);
             totalFunctionPointsLabel.Name = "totalFunctionPointsLabel";
-            totalFunctionPointsLabel.Size = new System.Drawing.Size(110, 13);
+            totalFunctionPointsLabel.Size = new System.Drawing.Size(58, 13);
             totalFunctionPointsLabel.TabIndex = 12;
-            totalFunctionPointsLabel.Text = "Total Function Points:";
+            totalFunctionPointsLabel.Text = "Total UFP:";
             // 
             // filesFunctionPointsLabel
             // 
             filesFunctionPointsLabel.AutoSize = true;
             filesFunctionPointsLabel.Location = new System.Drawing.Point(6, 42);
             filesFunctionPointsLabel.Name = "filesFunctionPointsLabel";
-            filesFunctionPointsLabel.Size = new System.Drawing.Size(107, 13);
+            filesFunctionPointsLabel.Size = new System.Drawing.Size(55, 13);
             filesFunctionPointsLabel.TabIndex = 10;
-            filesFunctionPointsLabel.Text = "Files Function Points:";
+            filesFunctionPointsLabel.Text = "Files UFP:";
             // 
             // nameLabel
             // 
@@ -456,17 +457,13 @@ namespace TUPUX.Forms
             // 
             // typeCombobox
             // 
-            this.typeCombobox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.uMLCollaborationBindingSource, "Type", true));
             this.typeCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.typeCombobox.FormattingEnabled = true;
-            this.typeCombobox.Items.AddRange(new object[] {
-            "EI",
-            "EO",
-            "EQ"});
             this.typeCombobox.Location = new System.Drawing.Point(117, 39);
             this.typeCombobox.Name = "typeCombobox";
             this.typeCombobox.Size = new System.Drawing.Size(195, 21);
             this.typeCombobox.TabIndex = 3;
+            this.typeCombobox.SelectedIndexChanged += new System.EventHandler(this.typeCombobox_SelectedIndexChanged);
             // 
             // rfvName
             // 
@@ -502,6 +499,7 @@ namespace TUPUX.Forms
             // 
             // groupBoxInfo
             // 
+            this.groupBoxInfo.Controls.Add(this.txtType);
             this.groupBoxInfo.Controls.Add(nameLabel);
             this.groupBoxInfo.Controls.Add(this.generateActionCheckBox);
             this.groupBoxInfo.Controls.Add(this.typeCombobox);
@@ -517,6 +515,14 @@ namespace TUPUX.Forms
             this.groupBoxInfo.TabStop = false;
             this.groupBoxInfo.Text = "Collaboration Information";
             // 
+            // txtType
+            // 
+            this.txtType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLCollaborationBindingSource, "Type", true));
+            this.txtType.Location = new System.Drawing.Point(138, 65);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(100, 20);
+            this.txtType.TabIndex = 8;
+            // 
             // CollaborationEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,8 +537,8 @@ namespace TUPUX.Forms
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CollaborationEdit";
-            this.TabText = "CollaborationEdit";
-            this.Text = "CollaborationEdit";
+            this.TabText = "Transaction Edit";
+            this.Text = "Transaction Edit";
             ((System.ComponentModel.ISupportInitialize)(this.uMLCollaborationBindingSource)).EndInit();
             this.tabCollection.ResumeLayout(false);
             this.tabFiles.ResumeLayout(false);
@@ -597,5 +603,6 @@ namespace TUPUX.Forms
         private CustomValidation.RequiredFieldValidator rfvType;
         private System.Windows.Forms.GroupBox groupBoxEstimation;
         private System.Windows.Forms.GroupBox groupBoxInfo;
+        private System.Windows.Forms.TextBox txtType;
     }
 }

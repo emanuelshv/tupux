@@ -6,12 +6,15 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using TUPUX.Entity;
+using TUPUX.Forms.Util;
 
 namespace TUPUX.Forms
 {
     public partial class CollaborationEdit : FormEdit
     {
         #region Attributes and Properties
+
+        private bool _load = false;
 
         private bool _changed = true;
         
@@ -39,8 +42,24 @@ namespace TUPUX.Forms
         {
 
             InitializeComponent();
+            
             Collaboration = collaboration;
+
             LoadCollaboration();
+
+
+            int selectIndex = -1;
+            typeCombobox.Items.Add(new ComboboxItem("External input", "EI"));
+            if ("EI" == collaboration.Type) selectIndex = 0;
+            typeCombobox.Items.Add(new ComboboxItem("External output", "EO"));
+            if ("EO" == collaboration.Type) selectIndex = 1;
+            typeCombobox.Items.Add(new ComboboxItem("External inquery", "EQ"));
+            if ("EQ" == collaboration.Type) selectIndex = 2;
+
+            typeCombobox.SelectedIndex = selectIndex;
+
+            tabCollection.TabPages.RemoveAt(1);
+            _load = true;
         }
 
         #region Methods Load
@@ -350,5 +369,13 @@ namespace TUPUX.Forms
         }
 
         #endregion
+
+        private void typeCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_load)
+            {
+                this.Collaboration.Type = ((ComboboxItem)typeCombobox.SelectedItem).Value.ToString();
+            }
+        }
     }
 }

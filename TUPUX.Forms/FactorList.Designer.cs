@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.uMLFactorCollectionDataGridView = new System.Windows.Forms.DataGridView();
+            this.DefinitionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SelectedKey = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.SelectedValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uMLFactorCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.gbxFactors = new System.Windows.Forms.GroupBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
-            this.uMLFactorCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DefinitionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SelectedKey = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.SelectedValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.uMLFactorCollectionDataGridView)).BeginInit();
-            this.gbxFactors.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uMLFactorCollectionBindingSource)).BeginInit();
+            this.gbxFactors.SuspendLayout();
             this.SuspendLayout();
             // 
             // uMLFactorCollectionDataGridView
@@ -65,6 +65,32 @@
             this.uMLFactorCollectionDataGridView.Size = new System.Drawing.Size(433, 413);
             this.uMLFactorCollectionDataGridView.TabIndex = 1;
             this.uMLFactorCollectionDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.uMLFactorCollectionDataGridView_DataBindingComplete);
+            // 
+            // DefinitionName
+            // 
+            this.DefinitionName.DataPropertyName = "DefinitionName";
+            this.DefinitionName.HeaderText = "Name";
+            this.DefinitionName.Name = "DefinitionName";
+            this.DefinitionName.ReadOnly = true;
+            this.DefinitionName.Width = 200;
+            // 
+            // SelectedKey
+            // 
+            this.SelectedKey.HeaderText = "Select";
+            this.SelectedKey.Name = "SelectedKey";
+            this.SelectedKey.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SelectedKey.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // SelectedValue
+            // 
+            this.SelectedValue.DataPropertyName = "SelectedValue";
+            this.SelectedValue.HeaderText = "Value";
+            this.SelectedValue.Name = "SelectedValue";
+            this.SelectedValue.ReadOnly = true;
+            // 
+            // uMLFactorCollectionBindingSource
+            // 
+            this.uMLFactorCollectionBindingSource.DataSource = typeof(TUPUX.Entity.UMLFactorCollection);
             // 
             // lblTotal
             // 
@@ -118,32 +144,6 @@
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // uMLFactorCollectionBindingSource
-            // 
-            this.uMLFactorCollectionBindingSource.DataSource = typeof(TUPUX.Entity.UMLFactorCollection);
-            // 
-            // DefinitionName
-            // 
-            this.DefinitionName.DataPropertyName = "DefinitionName";
-            this.DefinitionName.HeaderText = "Name";
-            this.DefinitionName.Name = "DefinitionName";
-            this.DefinitionName.ReadOnly = true;
-            this.DefinitionName.Width = 200;
-            // 
-            // SelectedKey
-            // 
-            this.SelectedKey.HeaderText = "Select";
-            this.SelectedKey.Name = "SelectedKey";
-            this.SelectedKey.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectedKey.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // SelectedValue
-            // 
-            this.SelectedValue.DataPropertyName = "SelectedValue";
-            this.SelectedValue.HeaderText = "Value";
-            this.SelectedValue.Name = "SelectedValue";
-            this.SelectedValue.ReadOnly = true;
-            // 
             // FactorList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,11 +157,11 @@
             this.MinimizeBox = false;
             this.Name = "FactorList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FactorList";
+            this.Text = "Factor List";
             ((System.ComponentModel.ISupportInitialize)(this.uMLFactorCollectionDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uMLFactorCollectionBindingSource)).EndInit();
             this.gbxFactors.ResumeLayout(false);
             this.gbxFactors.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uMLFactorCollectionBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -19,7 +19,7 @@ namespace TUPUX.Main
         static void Main(string[] args)
         {
             log.Info("Start Application");
-            Application.EnableVisualStyles();
+           Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
 

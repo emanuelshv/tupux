@@ -983,7 +983,7 @@ namespace TUPUX.ActiveRecord
         /// <returns></returns>
         public bool IsKindOf(string className, string stereotype)
         {
-            return this.IsKindOf(className, stereotype, false);
+            return this.IsKindOf(className, stereotype, true);
         }
 
         /// <summary>

@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.50727</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D1B544EE-B084-44E7-A9DE-004677EDCE04}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -217,6 +217,7 @@
     <Compile Include="UseCaseEdit.Designer.cs">
       <DependentUpon>UseCaseEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util\ComboboxItem.cs" />
     <Compile Include="Validation\Grid.cs" />
   </ItemGroup>
   <ItemGroup>

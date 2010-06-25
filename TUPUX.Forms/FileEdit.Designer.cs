@@ -79,7 +79,7 @@ namespace TUPUX.Forms
             detsLabel.Name = "detsLabel";
             detsLabel.Size = new System.Drawing.Size(32, 13);
             detsLabel.TabIndex = 2;
-            detsLabel.Text = "Dets:";
+            detsLabel.Text = "DET:";
             // 
             // retsLabel
             // 
@@ -88,7 +88,7 @@ namespace TUPUX.Forms
             retsLabel.Name = "retsLabel";
             retsLabel.Size = new System.Drawing.Size(32, 13);
             retsLabel.TabIndex = 4;
-            retsLabel.Text = "Rets:";
+            retsLabel.Text = "RET:";
             // 
             // typeLabel
             // 
@@ -105,10 +105,12 @@ namespace TUPUX.Forms
             // 
             // nameTextBox
             // 
+            this.nameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLFileBindingSource, "Name", true));
             this.nameTextBox.Location = new System.Drawing.Point(109, 13);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(239, 20);
+            this.nameTextBox.Size = new System.Drawing.Size(205, 20);
             this.nameTextBox.TabIndex = 2;
             // 
             // detsTextBox
@@ -144,7 +146,7 @@ namespace TUPUX.Forms
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(313, 147);
+            this.btnCancel.Location = new System.Drawing.Point(253, 147);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 2;
@@ -155,7 +157,7 @@ namespace TUPUX.Forms
             // btnOk
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOk.Location = new System.Drawing.Point(232, 147);
+            this.btnOk.Location = new System.Drawing.Point(172, 147);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 1;
@@ -178,7 +180,7 @@ namespace TUPUX.Forms
             this.gbxFile.Controls.Add(retsLabel);
             this.gbxFile.Location = new System.Drawing.Point(12, 12);
             this.gbxFile.Name = "gbxFile";
-            this.gbxFile.Size = new System.Drawing.Size(380, 129);
+            this.gbxFile.Size = new System.Drawing.Size(320, 129);
             this.gbxFile.TabIndex = 0;
             this.gbxFile.TabStop = false;
             this.gbxFile.Text = "File Info";
@@ -230,7 +232,7 @@ namespace TUPUX.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(404, 182);
+            this.ClientSize = new System.Drawing.Size(344, 182);
             this.Controls.Add(this.gbxFile);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
@@ -239,7 +241,7 @@ namespace TUPUX.Forms
             this.MinimizeBox = false;
             this.Name = "FileEdit";
             this.TabText = "FileEdit";
-            this.Text = "FileEdit";
+            this.Text = "File Edit";
             ((System.ComponentModel.ISupportInitialize)(this.uMLFileBindingSource)).EndInit();
             this.gbxFile.ResumeLayout(false);
             this.gbxFile.PerformLayout();
