@@ -141,14 +141,38 @@ namespace TUPUX.Forms
 
         private void cvProductivity_Validating(object sender, CustomValidation.CustomValidator.ValidatingCancelEventArgs e)
         {
+            if (this.txtProductivity.Text.Length == 0)
+            {
+                e.Valid = true;
+                this.txtProductivity.Text = "0";
+            }
             int aux = 0;
             e.Valid = int.TryParse(this.txtProductivity.Text, out aux);
         }
 
         private void cvEAF_Validating(object sender, CustomValidation.CustomValidator.ValidatingCancelEventArgs e)
         {
+            if (this.txtEAF.Text.Length == 0)
+            {
+                e.Valid = true;
+                this.txtEAF.Text = "1";
+            }
             int aux = 0;
             e.Valid = int.TryParse(this.txtEAF.Text, out aux);
         }
+
+        private void uMLIterationDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
+        }
+
+        //private void uMLIterationDataGridView_CellValidated(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if (e.RowIndex >= 0)
+        //    {
+        //        UMLIteration iteration = (UMLIteration)this.uMLIterationDataGridView.Rows[e.RowIndex].DataBoundItem;
+        //        iteration.Save();
+        //    }
+        //}
     }
 }

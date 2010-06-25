@@ -205,8 +205,10 @@
             this.uMLIterationDataGridView.RowHeadersWidth = 20;
             this.uMLIterationDataGridView.Size = new System.Drawing.Size(880, 206);
             this.uMLIterationDataGridView.TabIndex = 0;
+            
             this.uMLIterationDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uMLIterationDataGridView_CellClick);
             this.uMLIterationDataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.uMLIterationDataGridView_CellMouseDoubleClick);
+            this.uMLIterationDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.uMLIterationDataGridView_DataError);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -394,7 +396,7 @@
             // 
             // txtProductivity
             // 
-            this.txtProductivity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLPhaseBindingSource, "Name", true));
+            this.txtProductivity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLPhaseBindingSource, "ProductivityHistory", true));
             this.txtProductivity.Location = new System.Drawing.Point(401, 17);
             this.txtProductivity.Name = "txtProductivity";
             this.txtProductivity.Size = new System.Drawing.Size(203, 20);
@@ -402,6 +404,7 @@
             // 
             // txtEAF
             // 
+            this.txtEAF.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLPhaseBindingSource, "EAFHistory", true));
             this.txtEAF.Location = new System.Drawing.Point(99, 17);
             this.txtEAF.Name = "txtEAF";
             this.txtEAF.Size = new System.Drawing.Size(203, 20);
