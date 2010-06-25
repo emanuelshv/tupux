@@ -75,15 +75,18 @@ namespace TUPUX.Forms
 
         private void uMLIterationDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            UMLIteration iteration = (UMLIteration)this.uMLIterationDataGridView.Rows[e.RowIndex].DataBoundItem;         
-            FormEdit form = FormsFactory.GetFormEdit(iteration);
-            if (this.DockPanel == null)
+            if (e.RowIndex >= 0)
             {
-                form.Show();
-            }
-            else
-            {
-                form.Show(this.DockPanel);
+                UMLIteration iteration = (UMLIteration)this.uMLIterationDataGridView.Rows[e.RowIndex].DataBoundItem;
+                FormEdit form = FormsFactory.GetFormEdit(iteration);
+                if (this.DockPanel == null)
+                {
+                    form.Show();
+                }
+                else
+                {
+                    form.Show(this.DockPanel);
+                }
             }
         }
 
@@ -116,5 +119,36 @@ namespace TUPUX.Forms
         }
 
         #endregion
+
+        private void uMLIterationDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
+            {
+                if (this.uMLIterationDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex] is DataGridViewButtonCell)
+                {
+                    UMLIteration iteration = (UMLIteration)this.uMLIterationDataGridView.Rows[e.RowIndex].DataBoundItem;
+                    FactorList factorList = new FactorList(iteration.Factors);
+                    factorList.ShowDialog();
+                    if (factorList.Change)
+                    {
+                        iteration.Factors = factorList.Factors;
+                        iteration.EAF = factorList.Total;
+                        iteration.SaveFactors();
+                    }
+                }
+            }
+        }
+
+        private void cvProductivity_Validating(object sender, CustomValidation.CustomValidator.ValidatingCancelEventArgs e)
+        {
+            int aux = 0;
+            e.Valid = int.TryParse(this.txtProductivity.Text, out aux);
+        }
+
+        private void cvEAF_Validating(object sender, CustomValidation.CustomValidator.ValidatingCancelEventArgs e)
+        {
+            int aux = 0;
+            e.Valid = int.TryParse(this.txtEAF.Text, out aux);
+        }
     }
 }

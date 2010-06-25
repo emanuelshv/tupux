@@ -31,16 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label applyEstimationLabel;
-            System.Windows.Forms.Label actionFunctionPointsLabel;
-            System.Windows.Forms.Label fileFunctionPointsLabel;
             System.Windows.Forms.Label totalFunctionPointsLabel;
             System.Windows.Forms.Label EAFLabel;
             System.Windows.Forms.Label estimatedEffortLabel;
             System.Windows.Forms.Label estimatedProductivityLlabel;
-            System.Windows.Forms.Label previusProductivityLabel;
-            System.Windows.Forms.Label prevEAF;
             System.Windows.Forms.Label realProductivity;
             System.Windows.Forms.Label label2;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IterationEdit));
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.uMLIterationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.applyEstimationCheckBox = new System.Windows.Forms.CheckBox();
@@ -50,9 +47,9 @@
             this.useCasesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.useCasesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FileFunctionPoints = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActionFunctionPoints = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalFunctionPoints = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxUseCase = new System.Windows.Forms.GroupBox();
             this.btnUseCaseSelect = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -61,24 +58,21 @@
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnFactores = new System.Windows.Forms.Button();
             this.groupBoxEstimation = new System.Windows.Forms.GroupBox();
+            this.realProductivitytextBox = new System.Windows.Forms.TextBox();
             this.EAFTextBox = new System.Windows.Forms.TextBox();
+            this.realEAFtextBox = new System.Windows.Forms.TextBox();
             this.estimatedProductivityTextBox = new System.Windows.Forms.TextBox();
             this.estimatedEffortTextBox = new System.Windows.Forms.TextBox();
             this.groupBoxInfo = new System.Windows.Forms.GroupBox();
-            this.realEAFtextBox = new System.Windows.Forms.TextBox();
-            this.realProductivitytextBox = new System.Windows.Forms.TextBox();
-            this.prevEAFTextBox = new System.Windows.Forms.TextBox();
-            this.prevProductivityTextBox = new System.Windows.Forms.TextBox();
+            this.rfvName = new CustomValidation.RequiredFieldValidator();
+            this.validationSummary = new CustomValidation.ValidationSummary();
+            this.formValidator = new CustomValidation.FormValidator();
             nameLabel = new System.Windows.Forms.Label();
             applyEstimationLabel = new System.Windows.Forms.Label();
-            actionFunctionPointsLabel = new System.Windows.Forms.Label();
-            fileFunctionPointsLabel = new System.Windows.Forms.Label();
             totalFunctionPointsLabel = new System.Windows.Forms.Label();
             EAFLabel = new System.Windows.Forms.Label();
             estimatedEffortLabel = new System.Windows.Forms.Label();
             estimatedProductivityLlabel = new System.Windows.Forms.Label();
-            previusProductivityLabel = new System.Windows.Forms.Label();
-            prevEAF = new System.Windows.Forms.Label();
             realProductivity = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.uMLIterationBindingSource)).BeginInit();
@@ -87,6 +81,8 @@
             this.groupBoxUseCase.SuspendLayout();
             this.groupBoxEstimation.SuspendLayout();
             this.groupBoxInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rfvName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formValidator)).BeginInit();
             this.SuspendLayout();
             // 
             // nameLabel
@@ -101,43 +97,25 @@
             // applyEstimationLabel
             // 
             applyEstimationLabel.AutoSize = true;
-            applyEstimationLabel.Location = new System.Drawing.Point(6, 40);
+            applyEstimationLabel.Location = new System.Drawing.Point(363, 16);
             applyEstimationLabel.Name = "applyEstimationLabel";
             applyEstimationLabel.Size = new System.Drawing.Size(87, 13);
             applyEstimationLabel.TabIndex = 2;
             applyEstimationLabel.Text = "Apply Estimation:";
             // 
-            // actionFunctionPointsLabel
-            // 
-            actionFunctionPointsLabel.AutoSize = true;
-            actionFunctionPointsLabel.Location = new System.Drawing.Point(6, 16);
-            actionFunctionPointsLabel.Name = "actionFunctionPointsLabel";
-            actionFunctionPointsLabel.Size = new System.Drawing.Size(116, 13);
-            actionFunctionPointsLabel.TabIndex = 4;
-            actionFunctionPointsLabel.Text = "Action Function Points:";
-            // 
-            // fileFunctionPointsLabel
-            // 
-            fileFunctionPointsLabel.AutoSize = true;
-            fileFunctionPointsLabel.Location = new System.Drawing.Point(6, 42);
-            fileFunctionPointsLabel.Name = "fileFunctionPointsLabel";
-            fileFunctionPointsLabel.Size = new System.Drawing.Size(102, 13);
-            fileFunctionPointsLabel.TabIndex = 6;
-            fileFunctionPointsLabel.Text = "File Function Points:";
-            // 
             // totalFunctionPointsLabel
             // 
             totalFunctionPointsLabel.AutoSize = true;
-            totalFunctionPointsLabel.Location = new System.Drawing.Point(6, 68);
+            totalFunctionPointsLabel.Location = new System.Drawing.Point(452, 245);
             totalFunctionPointsLabel.Name = "totalFunctionPointsLabel";
-            totalFunctionPointsLabel.Size = new System.Drawing.Size(110, 13);
+            totalFunctionPointsLabel.Size = new System.Drawing.Size(34, 13);
             totalFunctionPointsLabel.TabIndex = 8;
-            totalFunctionPointsLabel.Text = "Total Function Points:";
+            totalFunctionPointsLabel.Text = "Total:";
             // 
             // EAFLabel
             // 
             EAFLabel.AutoSize = true;
-            EAFLabel.Location = new System.Drawing.Point(225, 68);
+            EAFLabel.Location = new System.Drawing.Point(660, 16);
             EAFLabel.Name = "EAFLabel";
             EAFLabel.Size = new System.Drawing.Size(30, 13);
             EAFLabel.TabIndex = 12;
@@ -146,7 +124,7 @@
             // estimatedEffortLabel
             // 
             estimatedEffortLabel.AutoSize = true;
-            estimatedEffortLabel.Location = new System.Drawing.Point(225, 16);
+            estimatedEffortLabel.Location = new System.Drawing.Point(304, 16);
             estimatedEffortLabel.Name = "estimatedEffortLabel";
             estimatedEffortLabel.Size = new System.Drawing.Size(84, 13);
             estimatedEffortLabel.TabIndex = 10;
@@ -155,34 +133,16 @@
             // estimatedProductivityLlabel
             // 
             estimatedProductivityLlabel.AutoSize = true;
-            estimatedProductivityLlabel.Location = new System.Drawing.Point(225, 42);
+            estimatedProductivityLlabel.Location = new System.Drawing.Point(467, 16);
             estimatedProductivityLlabel.Name = "estimatedProductivityLlabel";
             estimatedProductivityLlabel.Size = new System.Drawing.Size(114, 13);
             estimatedProductivityLlabel.TabIndex = 11;
             estimatedProductivityLlabel.Text = "Estimated Productivity:";
             // 
-            // previusProductivityLabel
-            // 
-            previusProductivityLabel.AutoSize = true;
-            previusProductivityLabel.Location = new System.Drawing.Point(6, 68);
-            previusProductivityLabel.Name = "previusProductivityLabel";
-            previusProductivityLabel.Size = new System.Drawing.Size(93, 13);
-            previusProductivityLabel.TabIndex = 6;
-            previusProductivityLabel.Text = "Prev. Productivity:";
-            // 
-            // prevEAF
-            // 
-            prevEAF.AutoSize = true;
-            prevEAF.Location = new System.Drawing.Point(229, 68);
-            prevEAF.Name = "prevEAF";
-            prevEAF.Size = new System.Drawing.Size(58, 13);
-            prevEAF.TabIndex = 7;
-            prevEAF.Text = "Prev. EAF:";
-            // 
             // realProductivity
             // 
             realProductivity.AutoSize = true;
-            realProductivity.Location = new System.Drawing.Point(7, 97);
+            realProductivity.Location = new System.Drawing.Point(6, 16);
             realProductivity.Name = "realProductivity";
             realProductivity.Size = new System.Drawing.Size(90, 13);
             realProductivity.TabIndex = 8;
@@ -191,11 +151,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(229, 94);
+            label2.Location = new System.Drawing.Point(162, 16);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(55, 13);
+            label2.Size = new System.Drawing.Size(63, 13);
             label2.TabIndex = 11;
-            label2.Text = "Real EAF:";
+            label2.Text = "Real Efford:";
             // 
             // nameTextBox
             // 
@@ -212,7 +172,7 @@
             // applyEstimationCheckBox
             // 
             this.applyEstimationCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.uMLIterationBindingSource, "ApplyEstimation", true));
-            this.applyEstimationCheckBox.Location = new System.Drawing.Point(106, 35);
+            this.applyEstimationCheckBox.Location = new System.Drawing.Point(463, 11);
             this.applyEstimationCheckBox.Name = "applyEstimationCheckBox";
             this.applyEstimationCheckBox.Size = new System.Drawing.Size(104, 24);
             this.applyEstimationCheckBox.TabIndex = 3;
@@ -220,30 +180,30 @@
             // actionFunctionPointsTextBox
             // 
             this.actionFunctionPointsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLIterationBindingSource, "ActionFunctionPoints", true));
-            this.actionFunctionPointsTextBox.Location = new System.Drawing.Point(126, 13);
+            this.actionFunctionPointsTextBox.Location = new System.Drawing.Point(597, 242);
             this.actionFunctionPointsTextBox.Name = "actionFunctionPointsTextBox";
             this.actionFunctionPointsTextBox.ReadOnly = true;
-            this.actionFunctionPointsTextBox.Size = new System.Drawing.Size(75, 20);
+            this.actionFunctionPointsTextBox.Size = new System.Drawing.Size(92, 20);
             this.actionFunctionPointsTextBox.TabIndex = 5;
             this.actionFunctionPointsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // fileFunctionPointsTextBox
             // 
             this.fileFunctionPointsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLIterationBindingSource, "FileFunctionPoints", true));
-            this.fileFunctionPointsTextBox.Location = new System.Drawing.Point(126, 39);
+            this.fileFunctionPointsTextBox.Location = new System.Drawing.Point(492, 242);
             this.fileFunctionPointsTextBox.Name = "fileFunctionPointsTextBox";
             this.fileFunctionPointsTextBox.ReadOnly = true;
-            this.fileFunctionPointsTextBox.Size = new System.Drawing.Size(75, 20);
+            this.fileFunctionPointsTextBox.Size = new System.Drawing.Size(99, 20);
             this.fileFunctionPointsTextBox.TabIndex = 7;
             this.fileFunctionPointsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // totalFunctionPointsTextBox
             // 
             this.totalFunctionPointsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLIterationBindingSource, "TotalFunctionPoints", true));
-            this.totalFunctionPointsTextBox.Location = new System.Drawing.Point(126, 65);
+            this.totalFunctionPointsTextBox.Location = new System.Drawing.Point(695, 242);
             this.totalFunctionPointsTextBox.Name = "totalFunctionPointsTextBox";
             this.totalFunctionPointsTextBox.ReadOnly = true;
-            this.totalFunctionPointsTextBox.Size = new System.Drawing.Size(75, 20);
+            this.totalFunctionPointsTextBox.Size = new System.Drawing.Size(95, 20);
             this.totalFunctionPointsTextBox.TabIndex = 9;
             this.totalFunctionPointsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -259,48 +219,46 @@
             this.useCasesDataGridView.AutoGenerateColumns = false;
             this.useCasesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
+            this.FileFunctionPoints,
+            this.ActionFunctionPoints,
+            this.TotalFunctionPoints});
             this.useCasesDataGridView.DataSource = this.useCasesBindingSource;
-            this.useCasesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.useCasesDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
             this.useCasesDataGridView.Location = new System.Drawing.Point(3, 16);
             this.useCasesDataGridView.Name = "useCasesDataGridView";
             this.useCasesDataGridView.ReadOnly = true;
-            this.useCasesDataGridView.Size = new System.Drawing.Size(787, 262);
+            this.useCasesDataGridView.Size = new System.Drawing.Size(787, 220);
             this.useCasesDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Use Case Name";
+            this.dataGridViewTextBoxColumn1.MaxInputLength = 400;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // FileFunctionPoints
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Type";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Type";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.FileFunctionPoints.DataPropertyName = "FileFunctionPoints";
+            this.FileFunctionPoints.HeaderText = "File UFP";
+            this.FileFunctionPoints.Name = "FileFunctionPoints";
+            this.FileFunctionPoints.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // ActionFunctionPoints
             // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Purpose";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Purpose";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.ActionFunctionPoints.DataPropertyName = "ActionFunctionPoints";
+            this.ActionFunctionPoints.HeaderText = "Transaction UFP";
+            this.ActionFunctionPoints.Name = "ActionFunctionPoints";
+            this.ActionFunctionPoints.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // TotalFunctionPoints
             // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Resume";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Resume";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.TotalFunctionPoints.DataPropertyName = "TotalFunctionPoints";
+            this.TotalFunctionPoints.HeaderText = "Total UFP";
+            this.TotalFunctionPoints.Name = "TotalFunctionPoints";
+            this.TotalFunctionPoints.ReadOnly = true;
             // 
             // groupBoxUseCase
             // 
@@ -308,9 +266,13 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxUseCase.Controls.Add(this.useCasesDataGridView);
-            this.groupBoxUseCase.Location = new System.Drawing.Point(7, 141);
+            this.groupBoxUseCase.Controls.Add(this.totalFunctionPointsTextBox);
+            this.groupBoxUseCase.Controls.Add(this.fileFunctionPointsTextBox);
+            this.groupBoxUseCase.Controls.Add(this.actionFunctionPointsTextBox);
+            this.groupBoxUseCase.Controls.Add(totalFunctionPointsLabel);
+            this.groupBoxUseCase.Location = new System.Drawing.Point(7, 115);
             this.groupBoxUseCase.Name = "groupBoxUseCase";
-            this.groupBoxUseCase.Size = new System.Drawing.Size(793, 281);
+            this.groupBoxUseCase.Size = new System.Drawing.Size(793, 307);
             this.groupBoxUseCase.TabIndex = 11;
             this.groupBoxUseCase.TabStop = false;
             this.groupBoxUseCase.Text = "Use Cases";
@@ -383,109 +345,93 @@
             // 
             // groupBoxEstimation
             // 
+            this.groupBoxEstimation.Controls.Add(this.realProductivitytextBox);
+            this.groupBoxEstimation.Controls.Add(label2);
+            this.groupBoxEstimation.Controls.Add(realProductivity);
             this.groupBoxEstimation.Controls.Add(this.EAFTextBox);
+            this.groupBoxEstimation.Controls.Add(this.realEAFtextBox);
             this.groupBoxEstimation.Controls.Add(this.estimatedProductivityTextBox);
             this.groupBoxEstimation.Controls.Add(this.estimatedEffortTextBox);
             this.groupBoxEstimation.Controls.Add(EAFLabel);
             this.groupBoxEstimation.Controls.Add(estimatedEffortLabel);
             this.groupBoxEstimation.Controls.Add(estimatedProductivityLlabel);
-            this.groupBoxEstimation.Controls.Add(totalFunctionPointsLabel);
-            this.groupBoxEstimation.Controls.Add(this.actionFunctionPointsTextBox);
-            this.groupBoxEstimation.Controls.Add(actionFunctionPointsLabel);
-            this.groupBoxEstimation.Controls.Add(this.fileFunctionPointsTextBox);
-            this.groupBoxEstimation.Controls.Add(fileFunctionPointsLabel);
-            this.groupBoxEstimation.Controls.Add(this.totalFunctionPointsTextBox);
-            this.groupBoxEstimation.Location = new System.Drawing.Point(376, 12);
+            this.groupBoxEstimation.Location = new System.Drawing.Point(7, 63);
             this.groupBoxEstimation.Name = "groupBoxEstimation";
-            this.groupBoxEstimation.Size = new System.Drawing.Size(424, 123);
+            this.groupBoxEstimation.Size = new System.Drawing.Size(793, 46);
             this.groupBoxEstimation.TabIndex = 16;
             this.groupBoxEstimation.TabStop = false;
             this.groupBoxEstimation.Text = "Estimation Values";
             // 
+            // realProductivitytextBox
+            // 
+            this.realProductivitytextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLIterationBindingSource, "RealProductivity", true));
+            this.realProductivitytextBox.Location = new System.Drawing.Point(100, 13);
+            this.realProductivitytextBox.Name = "realProductivitytextBox";
+            this.realProductivitytextBox.Size = new System.Drawing.Size(56, 20);
+            this.realProductivitytextBox.TabIndex = 9;
+            // 
             // EAFTextBox
             // 
             this.EAFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLIterationBindingSource, "EAF", true));
-            this.EAFTextBox.Location = new System.Drawing.Point(342, 65);
+            this.EAFTextBox.Location = new System.Drawing.Point(696, 13);
             this.EAFTextBox.Name = "EAFTextBox";
             this.EAFTextBox.ReadOnly = true;
-            this.EAFTextBox.Size = new System.Drawing.Size(75, 20);
+            this.EAFTextBox.Size = new System.Drawing.Size(67, 20);
             this.EAFTextBox.TabIndex = 15;
             this.EAFTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // realEAFtextBox
+            // 
+            this.realEAFtextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLIterationBindingSource, "RealEffort", true));
+            this.realEAFtextBox.Location = new System.Drawing.Point(231, 13);
+            this.realEAFtextBox.Name = "realEAFtextBox";
+            this.realEAFtextBox.ReadOnly = true;
+            this.realEAFtextBox.Size = new System.Drawing.Size(67, 20);
+            this.realEAFtextBox.TabIndex = 10;
             // 
             // estimatedProductivityTextBox
             // 
             this.estimatedProductivityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLIterationBindingSource, "EstimatedProductivity", true));
-            this.estimatedProductivityTextBox.Location = new System.Drawing.Point(342, 39);
+            this.estimatedProductivityTextBox.Location = new System.Drawing.Point(587, 13);
             this.estimatedProductivityTextBox.Name = "estimatedProductivityTextBox";
             this.estimatedProductivityTextBox.ReadOnly = true;
-            this.estimatedProductivityTextBox.Size = new System.Drawing.Size(75, 20);
+            this.estimatedProductivityTextBox.Size = new System.Drawing.Size(67, 20);
             this.estimatedProductivityTextBox.TabIndex = 14;
             this.estimatedProductivityTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // estimatedEffortTextBox
             // 
             this.estimatedEffortTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLIterationBindingSource, "EstimatedEffort", true));
-            this.estimatedEffortTextBox.Location = new System.Drawing.Point(342, 13);
+            this.estimatedEffortTextBox.Location = new System.Drawing.Point(394, 13);
             this.estimatedEffortTextBox.Name = "estimatedEffortTextBox";
             this.estimatedEffortTextBox.ReadOnly = true;
-            this.estimatedEffortTextBox.Size = new System.Drawing.Size(75, 20);
+            this.estimatedEffortTextBox.Size = new System.Drawing.Size(67, 20);
             this.estimatedEffortTextBox.TabIndex = 13;
             this.estimatedEffortTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // groupBoxInfo
             // 
-            this.groupBoxInfo.Controls.Add(label2);
-            this.groupBoxInfo.Controls.Add(this.realEAFtextBox);
-            this.groupBoxInfo.Controls.Add(this.realProductivitytextBox);
-            this.groupBoxInfo.Controls.Add(realProductivity);
-            this.groupBoxInfo.Controls.Add(prevEAF);
-            this.groupBoxInfo.Controls.Add(previusProductivityLabel);
-            this.groupBoxInfo.Controls.Add(this.prevEAFTextBox);
-            this.groupBoxInfo.Controls.Add(this.prevProductivityTextBox);
             this.groupBoxInfo.Controls.Add(nameLabel);
             this.groupBoxInfo.Controls.Add(this.nameTextBox);
             this.groupBoxInfo.Controls.Add(this.applyEstimationCheckBox);
             this.groupBoxInfo.Controls.Add(applyEstimationLabel);
             this.groupBoxInfo.Location = new System.Drawing.Point(7, 12);
             this.groupBoxInfo.Name = "groupBoxInfo";
-            this.groupBoxInfo.Size = new System.Drawing.Size(363, 123);
+            this.groupBoxInfo.Size = new System.Drawing.Size(793, 45);
             this.groupBoxInfo.TabIndex = 17;
             this.groupBoxInfo.TabStop = false;
             this.groupBoxInfo.Text = "Iteration Information";
             // 
-            // realEAFtextBox
+            // rfvName
             // 
-            this.realEAFtextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLIterationBindingSource, "RealEffort", true));
-            this.realEAFtextBox.Location = new System.Drawing.Point(293, 91);
-            this.realEAFtextBox.Name = "realEAFtextBox";
-            this.realEAFtextBox.Size = new System.Drawing.Size(64, 20);
-            this.realEAFtextBox.TabIndex = 10;
+            this.rfvName.ControlToValidate = this.nameTextBox;
+            this.rfvName.ErrorMessage = "Name is empty";
+            this.rfvName.Icon = ((System.Drawing.Icon)(resources.GetObject("rfvName.Icon")));
             // 
-            // realProductivitytextBox
+            // formValidator
             // 
-            this.realProductivitytextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLIterationBindingSource, "RealProductivity", true));
-            this.realProductivitytextBox.Location = new System.Drawing.Point(106, 91);
-            this.realProductivitytextBox.Name = "realProductivitytextBox";
-            this.realProductivitytextBox.Size = new System.Drawing.Size(64, 20);
-            this.realProductivitytextBox.TabIndex = 9;
-            // 
-            // prevEAFTextBox
-            // 
-            this.prevEAFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLIterationBindingSource, "EAFHistory", true));
-            this.prevEAFTextBox.Enabled = false;
-            this.prevEAFTextBox.Location = new System.Drawing.Point(293, 65);
-            this.prevEAFTextBox.Name = "prevEAFTextBox";
-            this.prevEAFTextBox.Size = new System.Drawing.Size(64, 20);
-            this.prevEAFTextBox.TabIndex = 5;
-            // 
-            // prevProductivityTextBox
-            // 
-            this.prevProductivityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.uMLIterationBindingSource, "ProductivityHistory", true));
-            this.prevProductivityTextBox.Enabled = false;
-            this.prevProductivityTextBox.Location = new System.Drawing.Point(106, 65);
-            this.prevProductivityTextBox.Name = "prevProductivityTextBox";
-            this.prevProductivityTextBox.Size = new System.Drawing.Size(64, 20);
-            this.prevProductivityTextBox.TabIndex = 4;
+            this.formValidator.HostingForm = this;
+            this.validationSummary.SetShowSummary(this.formValidator, true);
             // 
             // IterationEdit
             // 
@@ -511,10 +457,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.useCasesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.useCasesDataGridView)).EndInit();
             this.groupBoxUseCase.ResumeLayout(false);
+            this.groupBoxUseCase.PerformLayout();
             this.groupBoxEstimation.ResumeLayout(false);
             this.groupBoxEstimation.PerformLayout();
             this.groupBoxInfo.ResumeLayout(false);
             this.groupBoxInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rfvName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formValidator)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -536,18 +485,19 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnPrev;
         private System.Windows.Forms.Button btnFactores;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.GroupBox groupBoxEstimation;
         private System.Windows.Forms.TextBox EAFTextBox;
         private System.Windows.Forms.TextBox estimatedProductivityTextBox;
         private System.Windows.Forms.TextBox estimatedEffortTextBox;
         private System.Windows.Forms.GroupBox groupBoxInfo;
-        private System.Windows.Forms.TextBox prevEAFTextBox;
-        private System.Windows.Forms.TextBox prevProductivityTextBox;
         private System.Windows.Forms.TextBox realEAFtextBox;
         private System.Windows.Forms.TextBox realProductivitytextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FileFunctionPoints;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActionFunctionPoints;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalFunctionPoints;
+        private CustomValidation.RequiredFieldValidator rfvName;
+        private CustomValidation.ValidationSummary validationSummary;
+        private CustomValidation.FormValidator formValidator;
     }
 }

@@ -128,12 +128,6 @@ namespace TUPUX.Forms
                 this.btnNext.Enabled = false;
             }
 
-            if (Iteration.Next != null && Iteration.Prev == null)
-            {
-                prevProductivityTextBox.Enabled = true;
-                prevEAFTextBox.Enabled = true;
-            }
-
             this.btnPrev.Visible = false;
             this.btnNext.Visible = false;
         }

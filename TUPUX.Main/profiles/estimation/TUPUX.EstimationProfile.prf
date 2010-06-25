@@ -109,7 +109,7 @@
           <TAGDEFINITION lock="False">
             <NAME>Apply Estimation</NAME>
             <TAGTYPE>Boolean</TAGTYPE>
-            <DEFAULTDATAVALUE>False</DEFAULTDATAVALUE>
+            <DEFAULTDATAVALUE>True</DEFAULTDATAVALUE>
           </TAGDEFINITION>
 
           <TAGDEFINITION lock="true">
@@ -128,6 +128,18 @@
             <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
           </TAGDEFINITION>
 
+          <TAGDEFINITION lock="true">
+            <NAME>EAF History</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>1.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+
+          <TAGDEFINITION lock="true">
+            <NAME>Productivity History</NAME>
+            <TAGTYPE>Real</TAGTYPE>
+            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+          </TAGDEFINITION>
+          
         </TAGDEFINITIONLIST>
       </TAGDEFINITIONSET>
 
@@ -140,7 +152,7 @@
           <TAGDEFINITION lock="False">
             <NAME>Apply Estimation</NAME>
             <TAGTYPE>Boolean</TAGTYPE>
-            <DEFAULTDATAVALUE>False</DEFAULTDATAVALUE>
+            <DEFAULTDATAVALUE>True</DEFAULTDATAVALUE>
           </TAGDEFINITION>
 
           <TAGDEFINITION lock="False">
@@ -191,7 +203,7 @@
           <TAGDEFINITION lock="true">
             <NAME>EAF</NAME>
             <TAGTYPE>Real</TAGTYPE>
-            <DEFAULTDATAVALUE>0.0</DEFAULTDATAVALUE>
+            <DEFAULTDATAVALUE>1.0</DEFAULTDATAVALUE>
           </TAGDEFINITION>
         </TAGDEFINITIONLIST>
       </TAGDEFINITIONSET>
