@@ -304,7 +304,7 @@ namespace TUPUX.Entity
             get
             {
                 double mre = Math.Abs(RealProductivity - EstimatedProductivity);
-                if (RealProductivity > 0) mre = mre / RealProductivity;
+                if (RealProductivity > 0) mre = Math.Round(mre / RealProductivity, 2);
                 else mre = 0;
                 return mre;
             }

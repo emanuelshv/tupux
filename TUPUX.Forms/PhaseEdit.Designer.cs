@@ -58,6 +58,7 @@
             this.cvProductivity = new CustomValidation.CustomValidator();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RealEfford = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RealProductivity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EAF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estimacion = new System.Windows.Forms.DataGridViewButtonColumn();
             this.EstimatedEffort = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +69,7 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.First = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Last = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.MRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             nameLabel = new System.Windows.Forms.Label();
             applyEstimationLabel = new System.Windows.Forms.Label();
             totalFunctionPointsLabel = new System.Windows.Forms.Label();
@@ -188,6 +190,7 @@
             this.uMLIterationDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.RealEfford,
+            this.RealProductivity,
             this.EAF,
             this.Estimacion,
             this.EstimatedEffort,
@@ -197,7 +200,8 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.First,
-            this.Last});
+            this.Last,
+            this.MRE});
             this.uMLIterationDataGridView.DataSource = this.uMLIterationBindingSource;
             this.uMLIterationDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
             this.uMLIterationDataGridView.Location = new System.Drawing.Point(3, 16);
@@ -344,6 +348,12 @@
             this.RealEfford.HeaderText = "Real Effort";
             this.RealEfford.Name = "RealEfford";
             // 
+            // RealProductivity
+            // 
+            this.RealProductivity.DataPropertyName = "RealProductivity";
+            this.RealProductivity.HeaderText = "Real Productivity";
+            this.RealProductivity.Name = "RealProductivity";
+            // 
             // EAF
             // 
             this.EAF.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -435,6 +445,13 @@
             this.Last.ReadOnly = true;
             this.Last.Visible = false;
             // 
+            // MRE
+            // 
+            this.MRE.DataPropertyName = "MRE";
+            this.MRE.HeaderText = "MRE";
+            this.MRE.Name = "MRE";
+            this.MRE.ReadOnly = true;
+            // 
             // PhaseEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -494,6 +511,7 @@
         private CustomValidation.CustomValidator cvProductivity;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn RealEfford;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RealProductivity;
         private System.Windows.Forms.DataGridViewTextBoxColumn EAF;
         private System.Windows.Forms.DataGridViewButtonColumn Estimacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstimatedEffort;
@@ -504,5 +522,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewCheckBoxColumn First;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Last;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MRE;
     }
 }
