@@ -59,6 +59,8 @@ namespace TUPUX.Forms
             {
                 MessageBox.Show("You can't apply estimation to this phase", "Estimation Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            DoSave();
+            this._changed = false;            
         }
 
         private void btnOk_Click(object sender, EventArgs e)

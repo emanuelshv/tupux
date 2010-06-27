@@ -522,6 +522,7 @@ namespace TUPUX.Forms
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(100, 20);
             this.txtType.TabIndex = 8;
+            this.txtType.Visible = false;
             // 
             // CollaborationEdit
             // 
