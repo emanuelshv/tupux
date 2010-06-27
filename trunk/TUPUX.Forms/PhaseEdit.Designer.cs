@@ -42,18 +42,6 @@
             this.fileFunctionPointsTextBox = new System.Windows.Forms.TextBox();
             this.totalFunctionPointsTextBox = new System.Windows.Forms.TextBox();
             this.uMLIterationDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RealEfford = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EAF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estimacion = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.EstimatedEffort = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstimatedProductivity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.First = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Last = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.uMLIterationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBoxIterations = new System.Windows.Forms.GroupBox();
             this.btnEstimate = new System.Windows.Forms.Button();
@@ -68,6 +56,18 @@
             this.validationSummary = new CustomValidation.ValidationSummary();
             this.cvEAF = new CustomValidation.CustomValidator();
             this.cvProductivity = new CustomValidation.CustomValidator();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RealEfford = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EAF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estimacion = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.EstimatedEffort = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstimatedProductivity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.First = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Last = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             nameLabel = new System.Windows.Forms.Label();
             applyEstimationLabel = new System.Windows.Forms.Label();
             totalFunctionPointsLabel = new System.Windows.Forms.Label();
@@ -205,114 +205,9 @@
             this.uMLIterationDataGridView.RowHeadersWidth = 20;
             this.uMLIterationDataGridView.Size = new System.Drawing.Size(880, 206);
             this.uMLIterationDataGridView.TabIndex = 0;
-            
             this.uMLIterationDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uMLIterationDataGridView_CellClick);
             this.uMLIterationDataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.uMLIterationDataGridView_CellMouseDoubleClick);
             this.uMLIterationDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.uMLIterationDataGridView_DataError);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn1.FillWeight = 91.08049F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Iteration Name";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // RealEfford
-            // 
-            this.RealEfford.DataPropertyName = "RealEffort";
-            this.RealEfford.HeaderText = "Real Efford";
-            this.RealEfford.Name = "RealEfford";
-            // 
-            // EAF
-            // 
-            this.EAF.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EAF.DataPropertyName = "EAF";
-            this.EAF.FillWeight = 40F;
-            this.EAF.HeaderText = "EAF";
-            this.EAF.Name = "EAF";
-            this.EAF.ReadOnly = true;
-            // 
-            // Estimacion
-            // 
-            this.Estimacion.HeaderText = "...";
-            this.Estimacion.Name = "Estimacion";
-            this.Estimacion.ReadOnly = true;
-            this.Estimacion.Width = 20;
-            // 
-            // EstimatedEffort
-            // 
-            this.EstimatedEffort.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EstimatedEffort.DataPropertyName = "EstimatedEffort";
-            this.EstimatedEffort.FillWeight = 91.08049F;
-            this.EstimatedEffort.HeaderText = "Estimated Effort";
-            this.EstimatedEffort.Name = "EstimatedEffort";
-            this.EstimatedEffort.ReadOnly = true;
-            // 
-            // EstimatedProductivity
-            // 
-            this.EstimatedProductivity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EstimatedProductivity.DataPropertyName = "EstimatedProductivity";
-            this.EstimatedProductivity.FillWeight = 91.08049F;
-            this.EstimatedProductivity.HeaderText = "Estimated Productivity";
-            this.EstimatedProductivity.Name = "EstimatedProductivity";
-            this.EstimatedProductivity.ReadOnly = true;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "ApplyEstimation";
-            this.dataGridViewCheckBoxColumn1.FillWeight = 91.08049F;
-            this.dataGridViewCheckBoxColumn1.HeaderText = "ApplyEstimation";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
-            this.dataGridViewCheckBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "FileFunctionPoints";
-            this.dataGridViewTextBoxColumn3.FillWeight = 91.08049F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "File UFP";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "ActionFunctionPoints";
-            this.dataGridViewTextBoxColumn4.FillWeight = 91.08049F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Transaction UFP";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "TotalFunctionPoints";
-            this.dataGridViewTextBoxColumn5.FillWeight = 91.08049F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Total UFP";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // First
-            // 
-            this.First.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.First.DataPropertyName = "First";
-            this.First.HeaderText = "First";
-            this.First.Name = "First";
-            this.First.ReadOnly = true;
-            this.First.Visible = false;
-            // 
-            // Last
-            // 
-            this.Last.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Last.DataPropertyName = "Last";
-            this.Last.HeaderText = "Last";
-            this.Last.Name = "Last";
-            this.Last.ReadOnly = true;
-            this.Last.Visible = false;
             // 
             // uMLIterationBindingSource
             // 
@@ -434,6 +329,112 @@
             this.cvProductivity.Icon = ((System.Drawing.Icon)(resources.GetObject("cvProductivity.Icon")));
             this.cvProductivity.Validating += new CustomValidation.CustomValidator.ValidatingEventHandler(this.cvProductivity_Validating);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn1.FillWeight = 91.08049F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Iteration Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // RealEfford
+            // 
+            this.RealEfford.DataPropertyName = "RealEffort";
+            this.RealEfford.HeaderText = "Real Effort";
+            this.RealEfford.Name = "RealEfford";
+            // 
+            // EAF
+            // 
+            this.EAF.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EAF.DataPropertyName = "EAF";
+            this.EAF.FillWeight = 40F;
+            this.EAF.HeaderText = "EAF";
+            this.EAF.Name = "EAF";
+            this.EAF.ReadOnly = true;
+            // 
+            // Estimacion
+            // 
+            this.Estimacion.HeaderText = "   ";
+            this.Estimacion.Name = "Estimacion";
+            this.Estimacion.ReadOnly = true;
+            this.Estimacion.Width = 20;
+            // 
+            // EstimatedEffort
+            // 
+            this.EstimatedEffort.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EstimatedEffort.DataPropertyName = "EstimatedEffort";
+            this.EstimatedEffort.FillWeight = 91.08049F;
+            this.EstimatedEffort.HeaderText = "Estimated Effort";
+            this.EstimatedEffort.Name = "EstimatedEffort";
+            this.EstimatedEffort.ReadOnly = true;
+            // 
+            // EstimatedProductivity
+            // 
+            this.EstimatedProductivity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EstimatedProductivity.DataPropertyName = "EstimatedProductivity";
+            this.EstimatedProductivity.FillWeight = 91.08049F;
+            this.EstimatedProductivity.HeaderText = "Estimated Productivity";
+            this.EstimatedProductivity.Name = "EstimatedProductivity";
+            this.EstimatedProductivity.ReadOnly = true;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "ApplyEstimation";
+            this.dataGridViewCheckBoxColumn1.FillWeight = 91.08049F;
+            this.dataGridViewCheckBoxColumn1.HeaderText = "ApplyEstimation";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "FileFunctionPoints";
+            this.dataGridViewTextBoxColumn3.FillWeight = 91.08049F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "File UFP";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ActionFunctionPoints";
+            this.dataGridViewTextBoxColumn4.FillWeight = 91.08049F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Transaction UFP";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "TotalFunctionPoints";
+            this.dataGridViewTextBoxColumn5.FillWeight = 91.08049F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "UFP";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // First
+            // 
+            this.First.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.First.DataPropertyName = "First";
+            this.First.HeaderText = "First";
+            this.First.Name = "First";
+            this.First.ReadOnly = true;
+            this.First.Visible = false;
+            // 
+            // Last
+            // 
+            this.Last.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Last.DataPropertyName = "Last";
+            this.Last.HeaderText = "Last";
+            this.Last.Name = "Last";
+            this.Last.ReadOnly = true;
+            this.Last.Visible = false;
+            // 
             // PhaseEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,6 +484,14 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.GroupBox groupBoxInfo;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtProductivity;
+        private System.Windows.Forms.TextBox txtEAF;
+        private CustomValidation.RequiredFieldValidator rfvName;
+        private CustomValidation.FormValidator formValidator;
+        private CustomValidation.ValidationSummary validationSummary;
+        private CustomValidation.CustomValidator cvEAF;
+        private CustomValidation.CustomValidator cvProductivity;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn RealEfford;
         private System.Windows.Forms.DataGridViewTextBoxColumn EAF;
@@ -495,13 +504,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewCheckBoxColumn First;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Last;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtProductivity;
-        private System.Windows.Forms.TextBox txtEAF;
-        private CustomValidation.RequiredFieldValidator rfvName;
-        private CustomValidation.FormValidator formValidator;
-        private CustomValidation.ValidationSummary validationSummary;
-        private CustomValidation.CustomValidator cvEAF;
-        private CustomValidation.CustomValidator cvProductivity;
     }
 }
