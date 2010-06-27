@@ -298,6 +298,18 @@ namespace TUPUX.Entity
             }
         }
 
+
+        public Double MRE
+        {
+            get
+            {
+                double mre = Math.Abs(RealProductivity - EstimatedProductivity);
+                if (RealProductivity > 0) mre = mre / RealProductivity;
+                else mre = 0;
+                return mre;
+            }
+        }
+
         #endregion
 
         #region Constructor
@@ -375,8 +387,10 @@ namespace TUPUX.Entity
 
             
             EstimatedEffort = Math.Round(TotalFunctionPoints * EstimatedProductivity, 2);
-            
-            RealEffort = Math.Round(TotalFunctionPoints * RealProductivity, 2);
+            if (TotalFunctionPoints > 0)
+                RealProductivity = Math.Round(RealEffort / TotalFunctionPoints, 2);
+            else
+                RealProductivity = 0;
             //this.Save();
         }
                 
